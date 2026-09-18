@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LP Web Music Player</title>
+    <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiTFAgV2ViIE11c2ljIFBsYXllciIsInNob3J0X25hbWUiOiJMUCBQbGF5ZXIiLCJkZXNjcmlwdGlvbiI6IlBlbXV0YXIgbXVzaWsgbG9rYWwgJiBHb29nbGUgRHJpdmUiLCJzdGFydF91cmwiOiIvIiwic2NvcGUiOiIvIiwiZGlzcGxheSI6InN0YW5kYWxvbmUiLCJvcmllbnRhdGlvbiI6InBvcnRyYWl0IiwiYmFja2dyb3VuZF9jb2xvciI6IiMxMTExMTEiLCJ0aGVtZV9jb2xvciI6IiMwMjg0YzciLCJpY29ucyI6W3sic3JjIjoiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFNQUFBQURBQ0FZQUFBQlMzR3dIQUFBSFBFbEVRVlI0bk8zZFhWcmNPQlNFWVhWbkZrWFdCcGRrYldSVFFDNklKMjVqZC90SHN1cWMrdDZyZWVZSjRKYXFKQmxNY3lrZFhGL2ZQbnQ4WFdqN2VQbDVPZnRybnZJRkNUejJhbDJLWnArYzBLTzJGbVdvL2drSlBscXJXWVJxbjRqZzQydzFpbkQ0RXhCODlIUzBCSWMrbVBCRHhkNGlYUGQrUWNJUEpYdnp1TGsxQkIvcXR1d0dtM1lBd284SXR1UjBkUUVJUHlKWm05ZFZCU0Q4aUdoTmJoOFdnUEFqc2tmNTNmMWRJQ0NEdXdWZzlVY0c5M0s4V0FEQ2oweVc4anhiQU1LUGpPWnl6VDBBckgwckFLcy9NcHZtbXgwQTFtNEt3T29QQitPY3N3UEEydjhGWVBXSGt5SHY3QUN3UmdGZzdWSUt4eC80WWdlQU5Rb0FheFFBMXE2Yy8rSHN2OTRYa04zNzg5T2hqLy94NjNlbEs4RWNDbERKMGFCdi9id1VvdzRLc0ZPcndPLzkraFJpSHdxd1FlL1Ezek8rTnNxd0hnVjRRRG4wU3lqRGVoUmdRY1RnenhsZUIwV1lSd0Vtc2dSL2lpTE1vd0IvWlEzK0ZFVzRaVjhBbCtCUFVZUXZ0Z1Z3RGY2VWV4SHNDa0R3NTdrV3dlcGhPTUwvbU5zWTJSVEFiV0tQY0JxcjlFY2dwOG1zeWVWSWxIb0hJUHpIWlIvRHRBWElQbkZueWp5V0tRdVFlY0o2eVRxbXFlNEJzazZTaW96M0JXbDJBTUovbmt4am5hSUFtU1lraWl4akhyNEFXU1lpb2d4akg3b0FHU1lndXVoekVMb0F3RkZoQ3hCOTVja2s4bHlFTEVEa0FjOHE2cHlFSzBEVWdYWVFjVzVDRlNEaUFMdUpOa2VoQ2dEVUZxWUEwVllXWjVIbUtrUUJJZzBvdmtTWk0vbUg0YUlNNUNOYkh5REw4THJmbjUva0g1eVRMMEJVUnlkKyt2RVpDcUhvb3Z3SE1xSk4rcjNRYjMwdE5UOVhiOHE3QUR0QUJYTVRmRFNrOTk3K2ZQanZhRVZRSkxzRFJKamNYc2VVaU1jajFWMkFIV0NIM2dHYy9tWVdPOEora2p1QThrU093Njl5bllyWE5FZHhGMkFIV0VrNVpPTWRnZDFnRzdrZmhDbE9uSEw0eDlUL01vemkyTWtWUUUyVThBL1VTNkJHNmg1QUxXRFJqeE9xMTY5VVRIYUFCYXJoMlNMaisvalVKbE1BcGFCbENQOUFzUVJLNHlwVEFCV1p3ajlRTElFS0NqRGlFQkNIMTdpRlJBSFVWbHUxNjZsQjdUV3BYSTlFQVJSa1BQcE1jUlQ2amdJVWovQVBLTUd0N2dWd0NCM21LY3g5OXdMMDVyVDZEOWdGL3JFdkFMeFpQdzNhWS9WL3RPcWVkUzNETDZ6LytQWGJhdmViNnJvRE9BMzgrRkhsR3Y4dWk5NFpzRDBDbmJYNjd3MzBHVVhnWHNDNEFHZW9FU3puY0o2QkFqUlNNN2lVb0IzTEFyUSsvclFJYktzU3VCK0RMQXZRVXNzZ3VZYTBwVzRGNkgzMzM4SVpBYzFZZ3A1WllBZUFOYnNDdERyL243a3kxLzVhenZjQmRnVUF4aWhBQlQxV1RzZlZ1Z1VLQUdzVUFOWW9BS3hSQUZpakFMQkdBV0NOQXNBYUJhaWd4N01zR1orbDZvRUN3SnBkQVZvOTkzTG1pdHpxT1NiSFhjV3VBTUJZdHdKa2ZKYmxqQlUwNHlyZE13dnNBSlcxREdqRzhQZG1XWURXejcrM0NHcnIzMTkyTFpkbEFjNVFNMUN1NFR3REJXaW9SbkFKZjF1MkJUanIxd0RmbjU5MmhYanZ4MjNoZnZ3cHBYTUJNbjRuYU1uYVFKOFJmQ1c5TTJEOTd0QTkzaUZaSmR5cy9sOXNqMEJBS1JUQThpMUJXUDMvNlY0QXArRGhsc0xjZHkrQUFxZGRnTlgvRmdYNHk2RUVoUDg3aVFLb2hVN3RlbXBRZTAwcTF5TlJBQlVPSzZQRGE5eUNBa3hrUEFweDlGa21Vd0Nsd0dVcWdXTDRsY1pWcGdCcU1wUkFNZnhxTHRmWHQ4L2VGekdtTmxuakFxaGQyeExsYTFaYlVOZ0JIaGdIU0czeTVpaUhYNUZjQVJSREZxVUU2dUZYSER2cnAwRzNHTjhUcUoydDFZT3ZUTzRlWUtBOGtkT1ZyTmUxcWx6SEdvcXJmeW5zQUx0TXYwTjA5bzRRS2ZqcVpIZUFVdUpNN056cWRzWmZvWXc4UGlyWUFTcVkrNW5CMFZYNlhtaWlCRDhDNlIyZ2xMaVRIZm05UjJ0U1h2MUxZUWRvWmhyWXJVR0lHdmhvNUhlQVVnaERWT3FyZnltQ1B3aWJFMkVnY1N2S25JVW9RQ2x4QmhTeDVpcE1BWUFXUWhVZzBzcmlLdG9jaFNwQUtmRUcyRW5FdVFsWGdGSmlEblIyVWVja1pBRktpVHZnR1VXZWk3QUZBR29JWFlESUswOFcwZWNnZEFGS2lUOEJrV1VZKy9BRktDWEhSRVNUWmN4VEZLQ1VQQk1TUWFheFR2VTBxTnJ2Nm1hVEtmaURORHZBV01hSjZpM3JtS1lzUUNsNUo2eUh6R09adGdDbDVKNjRzMlFmdzFUM0FITzRMOWduZS9BSHFYZUFNWmNKcmNGcHJHd0tVSXJYeE83bE5rYnBqMEJUSElubXVRVi9ZRmVBQVVYNDRocjhnVzBCQnE1RmNBLyt3TDRBQTVjaUVQeGJGR0FpYXhFSS9qd0tzQ0JMRVFqK2ZSVGdnWWgvZklMUXIwY0JObEF1QTZIZmh3THMxUHVQVkJENE9paEFKVXVCUEZvTWd0NFdCV2lNQUd1N2Zyejh2UFMrQ0tBWHE0ZmhnQ2tLQUdzVUFOWW9BS3hkU3ltRkcyRTQrbmo1ZVdFSGdEVUtBRXZEcWVjNi9SK0FFM1lBV0xzcEFMc0FISXh6emc0QWE5OEt3QzZBektiNW50MEJLQUV5bXNzMVJ5QllXeXdBdXdBeVdjcnozUjJBRWlDRGV6bm1DSVRVSGkzaUR3dkFMb0NvMW1SMzFRNUFDUkROMnN5dVBnSlJBa1N4SmF1YjdnRW9BZFJ0emVqdVFGOWYzejczZml6UXdwNEZldmQzZ2RnTm9HUnZIZytIbUowQVBSMWRpS3V0NGhRQlo2dHhDcWwraktFSWFLM204YnZaT1o0aW9LWlc5NXluM01oU0J1elYrcHN0ZndEMW5SZWtkQ2FTalFBQUFBQkpSVTVFcmtKZ2dnPT0iLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIiwicHVycG9zZSI6ImFueSJ9LHsic3JjIjoiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFnQUFBQUlBQ0FZQUFBRDBlTlQ2QUFBVjhFbEVRVlI0bk8zZFNSYmJ4cElGVUtwWmxQN2E1S0cxTm10VHNtdmdva1ZSYk5Ca0V4bHg3OVRIRmdBaTR6MGtTT3ZEaFdZKy92blhQN09QQVNDN3YvLzQzNGZaeDVDQmk3aVRrQWVJU3puWXpvVjZRZGdEckUwaGVNNkZ1U0h3QVhKVENINHFmeUdFUGtCZGxRdEJ5Uk1YK2dEY3FsZ0VTcDJ3NEFmZ25TcGxJUDFKQ24wQWpzcGNCdEtlbU9BSG9KV01SU0RkQ1FsK0FIckpWQVRTbklqZ0IyQ1VERVZnK1JNUS9BRE1zbklSV1BiQUJUOEFVYXhZQkQ3T1BvQWpoRDhBa2F5WVMwczFsaFV2TUFDMXJMSWJzTVJCQ240QVZySkNDUWgvZ01JZmdGVkZMZ0todndNZy9BRllXZVFjQzlsTUlsOHdBRGdpMm01QXVCMEE0UTlBUnRIeUxWUUJpSFp4QUtDbFNEa1hZanNpMGdVQmdONGl2QTZZZmdEQ0g0Q3FaaGFCcWE4QWhEOEFsYzNNd1drRlFQZ0R3THc4bkZJQWhEOEEvRFFqRjRjWEFPRVBBTDhiblk5REM0RHdCNERuUnVia3NBSWcvQUhndlZGNU9hUUFDSDhBMkc1RWJuWXZBTUlmQVBicm5aOWRDNER3QjREamV1Wm90d0lnL0FIZ3ZGNTUycVVBQ0g4QWlDM1Uzd1lJQVB5dXg0TjE4d0xnNlI4QTJtdWRyMDBMZ1BBSGdINWE1bXl6QWlEOEFhQy9Wbm5yT3dBQVVGQ1RBdURwSHdER2FaRzdwd3VBOEFlQThjN203NmtDSVB3QllFMitBd0FBaXpyeklINjRBSGo2QjRENWp1YXhIUUFBS09oUUFmRDBEd0J4SE1ubDNRVkErQU5BUEh2ejJTc0FBQ2hvVndIdzlBOEFjZTNKYVRzQUFGRFE1Z0xnNlI4QTR0dWExM1lBQUtDZ1RRWEEwejhBckdOTGJ0c0JBSUNDM2hZQVQvOEFzSjUzK1cwSEFBQUtlbGtBUFAwRHdMcGU1YmdkQUFBb1NBRUFnSUtlRmdEYi93Q3d2bWQ1YmdjQUFBcDZXQUE4L1FOQUhvOXkzUTRBQUJTa0FBQkFRYjhWQU52L0FKRFBmYjdiQVFDQWdoUUFBQ2pvbHdKZyt4OEE4cnJOZVRzQUFGQ1FBZ0FBQlNrQUFGRFFmd1hBKzM4QXlPK2E5M1lBQUtBZ0JRQUFDbElBQUtBZ0JRQUFDdnB3dWZnQ0lBQlVZd2NBQUFwU0FBQ2dJQVVBQUFwU0FBQ2dvTSt6RHdCbzQ4ZlhMMFArbkUvZnZnLzVjNEMrRkFBSWJsU3diN1gxZUJRRmlPMkRud0JDRE5HQ3ZoZkZBR0t3QXdDRFZRbjZaNTZkdjJJQVl5a0EwRm4xd04vcS9qb3BCTkNYQWdDTkNmdzJGQUxvU3dHQWt3VCtHQW9CdEtVQXdFNENQd2FGQU01UkFHQURvUi9mN1dla0RNQjdDZ0E4SWZUWHBRekFld29BM0JENitTZ0Q4SmdDQUJmQlg4WDFjMVlFUUFHZ01LRmZsMTBCVUFBb1NQQnp5NjRBVlNrQWxDRDBlY2V1QU5Vb0FLUW0rRG5DcmdBVktBQ2tKUGhwUVJFZ013V0FWQVEvUFNnQ1pLUUFrSUxnWndSRmdFd1VBSlltK0psQkVTQURCWUFsQ1g0aVVBUlltUUxBVWdRL0VTa0NyRWdCWUFtQ254VW9BcXprNCt3RGdIZUVQNnR4ejdJQ093Q0VaWWl5TXJzQlJLY0FFSTdnSnhORmdLaThBaUFVNFU5VzdtMmlzUU5BQ0lZakZkZ05JQklGZ0trRVB4VXBBa1RnRlFEVENIK3Fzd2FZeVE0QXd4bDY4SlBkQUdheEE4QlF3aDhlc3pZWVRRRmdHQU1PWHJOR0dNa3JBTG96MUdBN3J3UVl4UTRBWFFsL09NYmFvVGNGZ0c0TU1EakhHcUlucndCb3p0Q0NkcndTb0JjN0FEUWwvS0VQYTR2V0ZBQ2FNYUNnTDJ1TWxyd0M0RFJEQ2NieFNvQlc3QUJ3aXZDSE9hdzl6bElBT013QWdybXNRYzVRQURqRTRJRVlyRVdPVWdEWXpjQ0JXS3hKamxBQTJNV2dnWmlzVGZieUt3QTJNVndnUHI4UVlBODdBTHdsL0dFdDFpeGJLQUM4WkpEQW1xeGQzbEVBZU1vQWdiVlp3N3lpQVBDUXdRRTVXTXM4b3dEd0d3TURjckdtZVVRQjRCY0dCZVJrYlhOUEFlQS9CZ1RrWm8xelN3SGdjcmtZREZDRnRjNlZBb0NCQU1WWTgxd3VDa0I1QmdIVVpPMmpBQlJtQUVCdFprQnRDa0JSRmo1d3VaZ0ZsU2tBQUZDUUFsQ1F4Zy9jTWhOcVVnQ0tzZENCUjh5R2VoU0FRaXh3NEJVem9oWUZvQWdMRzlqQ3JLaERBU2pBZ2diMk1ETnFVQUNTczVDQkk4eU8vQlFBQUNoSUFVaE1nd2ZPTUVOeVV3Q1NzbkNCRnN5U3ZCU0FoQ3hZb0NVekpTY0ZBQUFLVWdDUzBkU0JIc3lXZkJTQVJDeFFvQ2N6SmhjRklBa0xFeGpCck1sREFRQ0FnaFNBQkRSeVlDUXpKd2NGWUhFV0lqQ0QyYk0rQldCaEZpQXdreG0wTmdVQUFBcFNBQmFsZVFNUm1FWHIrano3QU5qUGd1T2RUOSsrTi8zdnVlZDQ1Y2ZYTDgzdk9mcFRBR0JSSXdmdXF6OUxPWUExZmZqNDUxLy96RDRJdGpOc2ExcnQ2Y3A5V3ROcTkybDFkZ0Fnb05VSDZmM3hLd1FRangyQWhSaWl1YTBlK2x1NWozT3JjaDlub0FBc3d0RE1xZnF3ZEYvblZQMitYb1ZYQUREWXFPSFlLbHg3SHUvdGYxc1pnTEhzQUN6QVlNeWhSNURPdmpjeW5oTnQyQVdJenc0QWROWnFFRVlNeGtmSGRQWjhyLzkreFBPRlRPd0FCR2NJcnFsRjZHZjU3RjJMdXV3Q3hLWUFCR2JvcmVmc3dNdittYnMrOVNnQmNYa0ZBSTBjSFhTVlF1MzJYSTljcjAvZnZwZTZYdENUSFlDZ0RMbDFIQWt5bisrdlhNUGM3QUxFWkFjQURoSmE3Vnl2eTU1cjZzdUNjSTRkZ0lBTXROZ0VmMyt1Y1Q1MkFlTDVPUHNBWUNWN2g5aVByMThFMHdGSHJwdUFnWDNzQUFRakxHSTZFdnkwNC9ybm9LVEZZZ2NBM3RnenREeng5N0gzdWdvYWVNOE9RQ0NDSTU2dFFlS3pHOHZuc2k3bExBNi9Bb0FIQkV4c1czODE0SmNDOEp4WEFFRVlVSEVJLzNWcy9RdzhkY1poM2NTaEFNQ05MVUhoUFg4c1d6OFBKUUIrNVRzQUFRaVQrVHoxNStCelhJZENOcDhkQU1vVEdubDRKUURiMlFHWVRLak10WFhMbi9YNGJPTlR4T2F5QTBCWkFpSTMzd3VBMXhTQWlZVExQTUsvQmlVZ05tdHNMZ1dBY3Q0TmZOL3l6MlhMNTZrRVVKRUNRQ2xid3ArY2xBRDRsUUl3aWFBWlQvaWpCTVJqM2MyakFGQ0M4T2RLQ1lCL0tRQVRDSnV4aEQvM2xJQllyTUU1RkFCU0UvNDhvd1JRblFKQVdzS2ZkNVFBS2xNQUJoTTZZd2gvdGxJQ1lyQW14MU1BS01lZzRaNTdnb29VZ0lFTW1URmVQYkg1REhqbTFiMWhGMkFNNjNNc0JZQlVoRDluS0FGVW9nQ1FoZ0ZOYis0eE1sRUFCdkgwT1pmcnoxYnVsYmxjLzNFVUFGS3c5VTlMWGdWUWdRTEE4b1EvUFNnQlpLY0FEQ0NFK2pHSW1jVzkxNCtaT1lZQ1FGcUdDR2U1aDhoTUFXQlp0djRad2FzQXNsSUFPaE5FZlFoL1JsSUN4ck9PKzFNQUFLQWdCWURsZVBwbkJyc0FaS01Ba0lid3B6ZjNHSmtvQUIwWkZ1MTUwaUlxOTJaN1ptaGZDZ0FwR0JTTTRsNGpDd1dBWlhqQ0lqcjNLQ3RSQUZpQ0wvNFJpUzhFa29FQzBJbFFBampQTE8xSEFTQThULzlFWkJlQTFTa0FBRkNRQXNDeVBQMHptM3VRbFgyZWZRQVpHUXJ0MkVwdFkrOTFkQStmOStuYmQ5ZXhrUjlmdjVnRkhTZ0FMTWxnZmE3Rm9IejAzM0ROSHhOT3JFb0JJQ3hEZGJzUjErcjJ6MUFHdHJFTFFHUytBOEJ5RE5TZlBuMzdQcVVvemZwem8zSlBzaUlGb0RHRG9BM2g4bHFVQUk1eUhKRzVQbTJZcmUwcEFDeWwraENJR3JoUmoydWs2dmNtNjFFQVlCRXJCT3dLeHdqOFN3RWdIQ0h5cTlXZXJsYzczaEZjRHlKU0FGaEd4UzNXbFlOajVXTS9xdUk5eXJvVUFBZ3FRNEJtT0FmSVNnRm9TUHMvVDJEOEs5TjF5SFF1WjdnTzU1bXhiU2tBTEtIU3dzOFlGQm5QNlpsSzl5cHJVd0Fna014Qm1mbmNZRVVLQUdGVUQ0Z0s1MS9oSEYrcGZ2N0VvZ0FRWG9VdDFVckJVT0ZjSzl5enJFOEJnTWtxQk9LOWl1Y00wU2dBaldqOEhGRTVDQ3VmTzhlWnRlMG9BSVFnREtqQ3ZVNFVDZ0NoWlc3N2dpRDNOY2g4NzVLREFnQVRaQTYrdlZ3TG1FTUJBSUNDRkFBWXpCUHY3MXdUR0U4QllEckRuMnJjODBTZ0FCQld4aTlSR2Z6UFpidzJHZTloOGxBQUFLQWdCUUFHeWZpRTI1cHJCT01vQUEzWTVnTVl4OHh0UXdFQWdJSVVBQmpBMXZaMnJoV01vUUF3bFdGUFZlNTlabE1BQ01rN1BySndMeE9WQWdBQUJTa0FBRkNRQWdDZGVkZTduMnNHL1NrQUFGQ1FBZ0FBQlNrQUFGQ1FBZ0FBQlNrQUFGQ1FBZ0FBQlNrQUFGQ1FBZ0FBQlNrQUFGQ1FBZ0FBQlNrQUFGQ1FBZ0NkK2V0ZzkzUE5vRDhGQUFBS1VnQUFvQ0FGZ0pEOGRiQms0VjRtS2dXQXFienJwU3IzUHJNcEFEQ0FZYitkYXdWaktBQUFVSkFDMElCM2ZBRGptTGx0S0FBd2lLM3Q5MXdqR0VjQkFJQ0NGQURDeXJqTjV3bjN1WXpYSnVNOVRCNEtBTk5sSFB6d2ludWVDQlFBR016dy81MXJBdU1wQUFCUWtBSUFFM2ppL2NtMWdEa1VBRUxML0NVcXdaZjdHbVMrZDhsQkFTQ0V6RUVBdDl6clJLRUFOS0x0YzBUbE1LaDg3aHhuMXJhakFNQmtGWU93NGpsRE5Bb0E0VlZvL0pVQ3NjSzVWcmhuV1o4Q1FCZ1ZndUdWQ3VkZjRSeGZxWDcreEtJQVFDQ1pBeUx6dWNHS0ZBQ1dVR2xMTldOUVpqeW5aeXJkcTZ4TkFXakl3ait2VWxDOGt1azZaRHFYTTF5SDg4ell0aFFBQ0NwRFlHUTRCOGhLQVdBWkZkdi95Z0c2OHJFZlZmRWVaVjBLQU9GVURJNVhmbno5c3RRMVdlMTRSM0E5aUVnQmdFV3NFQ0lySENQd0x3V0FwVlRmWW8zNmRCMzF1RWFxZm0reUhnV2dNVU9namVwaDhrNlV3STF5SEpHNVBtMllyZTBwQUN6SElQaHBWZ0FML2wrNUoxblI1OWtIQU0vOCtQckZZTjNvTm94N1hUT0J2NTlyUm1RS0FFdjY5TzI3NGZyRW8rdXl0eFM0dHRzcHFheEtBZWhBT0xWakY2QU45K040cm5rN1prQWZ2Z1BBc2d3RlpuTVBzaklGQUFBS1VnQUk3OVZXcWljd1pubDE3OW4rWndVS1FDZUNDZUE4czdRZkJZQWwyQVVnRWsvL1pLQUFzQXlEbGVqY282eEVBU0FGdXdDTTRsNGpDd1dnSTRPaVBVOVlST1hlYk04TTdVc0JJQTNEZ3Q3Y1kyU2lBTEFjWHdoa0JsLzhJeHNGQUFBS1VnQTY4MFRhaDEwQVJ2TDBQNTUxM0o4Q3dMS1VBRVlRL21TbEFKQ1dFc0JaN2lFeVV3QUdNRVQ2OFFUR0xPNjlmc3pNTVJRQWx1ZFZBRDNZK2ljN0JZQVVsQUJhRXY1VW9BQU1Jb1RtY3YzWnlyMHlsK3MvamdKQUdwN002TTA5UmlZS0FLbDRGY0FadHY2cFJBRVlTQUNOb1FSd2hQQ2Z6L29jU3dHZ0hFT0dlKzRKS2xJQUJqTm94bmozeE9aejRPcmR2ZURwZnd4cmNqd0ZnTFNVQU40Ui9sU21BSkNhRXNBendwL3FGSUFKaE01WVNnRDNoSDhzMXVBY0NnQWxLQUZjQ1gvNGx3SXdpY0FaVHdsQStNZGozYzJqQUZDS0VsQ1g4SWRmS1FDVXM2VUVLQUo1YlBrOGhUOFZLUUFUQ1psNXRneDhuOC82dG55R3duOGVhMnd1QllDeWxJRGNoRCs4OXVIam4zLzlNL3NncWpPRTV0b2E4ajZuTmZnODE2QmN6MmNIZ1BLMkJvR0JGWi93aCszc0FBUmhJTVZnMjNoZFBydDFLTk14MkFHQUcxdS9GMkNBeGJIMTh4RCs4Q3NGSUFpQkVvZFhBdXV3NWI4ZTZ5YU96N01QQUNLNkJzYTdZWFg5NXdKbUxNRVA1L2tPUURBR1ZqeDdubGg4Zm4zNUxOYm02VDhXcndEZ2pUMUI0dnNCZmV5OXJzSWYzck1ERUpEaEZkZmVjUGRabnVONjU2RVl4Mk1IQUhiWUd6QjJCSTQ1Y3QyRVAreGpCeUFvd3l5K0k4SHVjMzNOTmMxSkNZN0pyd0Rnb0syL0ZMamxWd09QQ1g0WXp3NUFZQWJjV280KzVWVDluRjJ2R2p6OXgyVUhBQnI1OGZYTG9XRjMrKzlrRDdlellaRDkrc0JJZGdDQ00vRFcxT0twSjh0bjcxclU1ZWsvTmdWZ0FZYmYybG9Od1ZYdWcycm55MlBDUHo2dkFLQ3pJMThXZk9UUnZ6ODdKSHNNK2RubkJGWFlBVmlFb1pqSHFDZWpWdmZNYXNmTGZKNysxMkFIQUFhN0RicWVnM0tGSVN6MFlSNDdBQXN4TEhOYkliQmJjQi9uVnVVK3prQUJXSXpoV1VPMkllcStyU0hiZlp1ZFZ3QVEwSDFncmpaWUJUN0Vad2RnUVlZcmwwdWNVdUIrNUhLSmN6K3luUjBBV05TcjRHMDlqSVU4NUdNSFlGRUdNaENGcC84MWZaeDlBQnhqd1FFUm1FWHJVZ0FBb0NBRllHR2FOekNUR2JRMkJXQnhGaUF3ZzltelBnVWdBUXNSR01uTXlVRUJBSUNDRklBa05ISmdCTE1tRHdVZ0VRc1Q2TW1NeVVVQlNNWUNCWG93Vy9KUkFBQ2dJQVVnSVUwZGFNbE15VWtCU01xQ0JWb3dTL0pTQUJLemNJRXp6SkRjRkFBQUtFZ0JTRTZEQjQ0d08vSlRBQXF3a0lFOXpJd2FGSUFpTEdoZ0M3T2lEZ1dnRUFzYmVNV01xRVVCS01ZQ0J4NHhHK3BSQUFxeTBJRmJaa0pOQ2dBQUZLUUFGS1h4QTVlTFdWQ1pBbENZaFErMW1RRzFLUURGR1FCUWs3V1BBb0JCQU1WWTgxd3VDZ0QvejBDQUdxeDFyaFFBL21Nd1FHN1dPTGNVQUg1aFFFQk8xamIzRkFCK1kxQkFMdFkwanlnQVBHUmdRQTdXTXM4b0FEeGxjTURhckdGZVVRQjR5UUNCTlZtN3ZLTUE4SlpCQW11eFp0bmk4K3dEWUEzWGdmTGo2NWZKUndJOEkvalp3dzRBdXhnd0VKTzF5VjRLQUxzWk5CQ0xOY2tSQ2dDSEdEZ1FnN1hJVVFvQWh4azhNSmMxeUJrS0FLY1lRRENIdGNkWmZnWEFhWDRoQU9NSWZscXhBMEF6QmhQMFpZM1JrZ0pBVXdZVTlHRnQwWnBYQURUbmxRQzBJL2pweFE0QTNSaGNjSTQxUkU4S0FGMFpZSENNdFVOdlhnSFFuVmNDc0ozZ1p4UTdBQXhqc01GcjFnZ2pLUUFNWmNEQlk5WUdvM2tGd0hCZUNjQlBncDlaN0FBd2pjRkhkZFlBTTlrQllDcTdBVlFrK0lsQUFTQUVSWUFLQkQrUmVBVkFLQVlrV2JtM2ljWU9BT0hZRFNBVHdVOVVDZ0JoS1FLc1RQQVRuVmNBaEdlUXNocjNMQ3V3QThBUzdBYXdBc0hQU2hRQWxxSUlFSkhnWjBVS0FFdFNCSWhBOExNeUJZQ2xLUUxNSVBqSlFBRWdCVVdBRVFRL21TZ0FwS0lJMElQZ0p5TUZnSlFVQVZvUS9HU21BSkNhSXNBUmdwOEtGQUJLdUIzb3lnQ1BDSDJxVVFBb3g2NEF0d1EvVlNrQWxHVlhvQzZoRHdvQVhDNFh1d0pWQ0g3NFNRR0FHM1lGOGhINjhKZ0NBRThvQStzUyt2Q2VBZ0FiS0FQeENYM1lSd0dBbmU2RFJpR1lRK0RET1FvQW5LUVFqQ0h3b1MwRkFCcFRDTm9RK05DWEFnQ2RLUVRiQ0h3WVN3R0F3WjRGWFpWaUlPZ2hCZ1VBZ3NoV0RBUTl4UGJoY3JsY1B2NzUxeit6RHdRNFoxUlJFT3lRZ3gwQVNFSXdBM3Q4bkgwQUFNQjRDZ0FBRktRQUFFQkJDZ0FBRktRQUFFQkJIeStYeStYdlAvNzNZZmFCQUFCai9QM0gvejdZQVFDQWdoUUFBQ2hJQVFDQWd2NHJBTDRIQUFENVhmUGVEZ0FBRktRQUFFQkJDZ0FBRlBSTEFmQTlBQURJNnpibjdRQUFRRUVLQUFBVXBBQUFRQUgzci9sL0t3QytCd0FBK2RrQkFJQ0NIaFlBdXdBQWtNZWpYTGNEQUFBRktRQUFVTkRUQXVBMUFBQ3M3MW1lMndFQWdJSVVBQUJJNnRWdS9zc0M0RFVBQU9Sa0J3QUFDbnBiQU93Q0FNQjYzdVczSFFBQUtHaFRBYkFMQUFEcjJKTGJkZ0FBb0tETkJjQXVBQURFdHpXdjdRQUFRRUc3Q29CZEFBQ0lhMDlPMndFQWdBVDJQcVR2TGdCMkFRQmdmWWQyQUpRQUFJampTQzU3QlFBQUJSMHVBSFlCQUdDK28zbDhhZ2RBQ1FDQWVjN2tzRmNBQUZEUTZRSmdGd0FBeGp1YnYwMTJBSlFBQUJpblJlNTZCUUFBQzJuMTBOMnNBTmdGQUlCMU5OMEJVQUlBb0orV09kdjhGWUFTQUFEdHRjN1hMdDhCVUFJQW9KMGV1ZXBMZ0FBUVdLK0g2bTRGd0M0QUFNVFZkUWRBQ1FDQTQzcm1hUGRYQUVvQUFPelhPeitIZkFkQUNRQ0E3VWJrNXJBdkFTb0JBUERlcUx3Yytpc0FKUUFBbmh1Wms4Ti9CcWdFQU1EdlJ1ZmpsUDhQZ0JJQUFEL055TVZwL3lNZ0pRQUE1dVhoOUJEKytPZGYvOHcrQmdBWWJmYUQ4UFFDY0tVSUFGREY3UEMvWEFMOVhRQVJMZ1lBOUJZbDc4SVVnTXNsemtVQmdCNGk1VnlZQTdubGRRQUFtVVFLL3F0d0IzUkxFUUJnZFJIRC8zSUo5Z3JnWHRTTEJnQmJSTTZ4c0FkMnoyNEFBS3VJSFB4WG9YY0FicTF3TVFGZ2xieGE0aUR2MlEwQUlKcFZndjlxcVlPOXBRUUFFTUZxd1grMTVFSGZVZ1FBbUdYVjhMOWNFaFNBSzBVQWdGRldEdjZyNVUvZ25pSUFRQzhaZ3Y4cXpZbmNVd1FBYUNWVDhGK2xPNkY3aWdBQVIyUU0vVnVwVCs2ZU1nREFPOW1ELzZyRVNkNVRCQUM0VlNYMGI1VTc0WHZLQUVCTkZVUC9WdW1UdjZjTUFPUldQZlJ2dVJBdktBUUFheFA0ejdrd095a0ZBSEVKL08zK0Q2MzNMaTVYdlhyQkFBQUFBRWxGVGtTdVFtQ0MiLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIiwicHVycG9zZSI6ImFueSJ9LHsic3JjIjoiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFNQUFBQURBQ0FZQUFBQlMzR3dIQUFBRnFFbEVRVlI0bk8zZFNYTFVRQkJBMGJMaFVOeU5yVG1idVJSaEZsZ1JRdTVCUTAyWi83OGRDMngxS2I5SzdXNjNYMTdmM2orS0JQVTYrZ0Nra1F4QWFBWWdOQU1RbWdFSXpRQ0VaZ0JDTXdDaEdZRFFERUJvQmlBMEF4Q2FBUWpOQUlSbUFFSXpBS0VaZ05BTVFHZ0dJRFFERUpvQkNNMEFoR1lBUWpNQW9SbUEwQXhBYUFZZ05BTVFtZ0VJelFDRVpnQkNNd0NoR1lEUURFQm9CaUEwQXhDYUFRak5BSVJtQUVJekFLRVpnTkMrano0QWdqOC9mNXo2Zjk5Ky9hNThKTm95Z0lyT0R2clJyMmNZOVJqQVJiV0gvdWozTklackRPQ0VFVU4vanpGY1l3QUh6RFQ0dHl6SFp3ajdHY0FUc3cvOUxlNEsreG5BSFJFSC94WjNoY2Q4SGVDR0xNTy9sdkV4MWVBT3NKSjlTTndOdm5JSCtKUjkrTmRJai9VWi9BNUFIUVozZzMvUU93QjErTmZvYTRBTmdIN2kxOGhyZ2JzRklwL3NSNmkzUktnZHdPRi9qclpHbUFCb0ovWUswbG9oQWlDZDBGb29hNVkrQU1xSmJJR3dkcWtESUp6QTFyS3ZZZW9BcEdmU0JwRDl5dFZUNXJWTUdVRG1FelpLMWpWTkYwRFdFeldEakd1YkxnRHBpRlJ2aFpqOUNyWDNiUVl6UDQ0L1AzK2tlcnZFeSt2Yis4Zm9nNmhoeHFHcE5TaVpIOXRvcVhhQUdUd2FqTDJEdlAwYTYzL1BHRU5rS1hhQUdZYmkxdURYT3E2V1gvdUtETHRBK0FCR0Q4SjJDRm9mVCsvdjkwejBDUHdwMEFYYlc1TWV3N2o5UHRFSGNMVFFBWXk4K28yK0w1OGxndEU3MEZVK0NUNW85T0N2clgrTGF6bXUwY2NVVGVnZG9MZVpobjl0bHQwZ29yQUI5QjdBV1lkL01US0NHZGRqcjdBQjlEVDc4Qy9jQ1k0TEdjQ29JWng1K0JldXpURWhBK2dwNHBOTDZrZWNuR0VBRDBRYy9vVVI3Qk11Z0Y3RG1HbHdlajJXaUJlS2NBSDBGdkdrTGlJZmV5OEdjRVBrVzU4dGI0VWVDeFZBaG9ITUx0bzU4cTBRR3oydS92ZXV4cTIrNS9KYlhOOSsvUTQzb0swWlFDZDdia0dpdk9DV1NhaGJvS2pPM0g5N3o5NkhBYXkwdVAyNU1zZzFJL0RKOEcwRzBGQ05ZWE5nMndvVFFMUjc0cHFER3kyQ1NPY3FUQUNSdEJqWWFCRkVZUUNmTXIzNGRZL1BBNzR5QUtFWlFHVXRyNjVldWVzekFLRVpnTkFNUUdnR0lEUURFSm9CVk5ieWRZVE1yMUdNWWdCQ000QlBoRmRKQ2E5MkgyVUFEYlFZTUllMmpUQUJSTHN5MXh6WWFNTWY2VnlGQ1NDaUdvTWJiZmlqTVlDVkZzOERyZ3h3aTk5TU02ai9HVUFIWjRiT1FlM0RUNFhvWk05SGx6djAvUm5BUm8vUDBCbjF4ejBNN0t0UXQwQ1JmcnBBRmUwY2hRcWdsMHd2aW5uMWY4d0Fub2djUWVSajd5VmNBSDdXL1hIK1RZWDd3Z1hRVStSYklXOTk5akdBSnlKRzRQRHZGektBVWNNWUlRTFg1cGlRQWZRVzVlL3YrdkhxeDRVTllPUmZRNTh4Z3BIRFArTjY3QlUyZ0JGbWpjQXIvM20rRmVLZzlaUGkwVTgySGZ6clF1OEFJNi9DbzNlRFdZWi9wcDN3ak5BQmpMYU5vTWN3YkwrUFYvNXJYbDdmM2o5R0g4UlZNd3pCcmVHdmRWd3R2L1lWMGEvK3BTUUpvSlE1QnFLVXgwT3g5eGhyZkkzV01neC9LVDRKcnU3UmM0T3pRelBMMEdlVVpnY29aZjVCMlJ0QWxzY1JRYW9BU3BsL2VLTExOUHlsK0ZNZ3dhVUxJTnNWYWlZWjF6WmRBS1hrUEZHalpWM1RsQUdVa3ZlRWpaQjVMZE1HSU8yUk9vRE1WNjVlc3E5aDZnQkt5WDhDV3lLc1hmb0FTbUdjeU5vb2E0WUlvQlRPQ2EyQnRGYVlBRXBobmRpemFHdUVlelBjNk4vaW1oVnQ4QmVvSFdDTmVzSnZJYThGTm9CUzJDZCtRVjhEM0MzUUZ2V1dpRDc0Qy9RT3NFWWFDTkpqZlFhL0E2eGwzdzBjL0svY0FXN0lPQ2daSDFNTjdnQjNaTmtOSFB6SERPQ0ppSi9CNDlEdlp3QUh6TDRyT1BqSEdjQUpNKzBLRHYwMUJuRFJpQmdjK25vTW9LTGFmd0hlUVcvUEFEcHdrT2ZsNndCQ013Q2hHWURRREVCb0JpQTBBeENhQVFqTkFJUm1BRUl6QUtFWmdOQU1RR2dHSURRREVKb0JDTTBBaEdZQVFqTUFvUm1BMEF4QWFBWWdOQU1RbWdFSXpRQ0VaZ0JDTXdDaEdZRFFERUJvQmlBMEF4Q2FBUWpOQUlSbUFFSXpBS0VaZ05BTVFHZ0dJRFFERUpvQkNNMEFoR1lBUXZzTC9wOERNYllLbkg4QUFBQUFTVVZPUks1Q1lJST0iLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIiwicHVycG9zZSI6Im1hc2thYmxlIn0seyJzcmMiOiJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQWdBQUFBSUFDQVlBQUFEMGVOVDZBQUFSYVVsRVFWUjRuTzNkWFpMYnRoYUZVYVh0UVhsdWZyWEhGay9LbGZ2ZzlJMzZSeEpKQVFSdzlsclBUaGRKa1RnZm9lN0tYeTgvL3Y3bkFnQkVlUmw5QUFEQStRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUTZPdm9Bd0RhK2YzOVc5ZWYvK1hucjY0L0h6aVBBSUJGOUI3dXJZNUJKTUFhQkFCTVpvWkIvNHhieHk4TVlDNENBQVpiZmVCdjlmNDhCUUdNSlFEZ1JDbkRmb3ZQcm9Vb2dQTUlBT2pNME4vdStscUpBZWhMQUVCakJuNGJ2aktBdmdRQU5HRG85MmQzQU5vU0FIQ1FvVCtPR0lEbkNRRFl5ZUNmeSt2bklRUmdId0VBR3hqNjg3TXJBUHNJQUxqRDRGK1RYUUY0VEFEQU80WitIWFlGNERZQkFQOHkrR3V6S3dCdkNRRGlHZnhaaEFEOElRQ0laZkJuRXdLa0V3REVNZmk1SmdSSUpRQ0lZZkJ6anhBZ3pjdm9BNEF6R1A1czVWNGhoUjBBU3JPWWM0VGRBQklJQUVveStHbEJDRkNaQUtBVWc1OGVoQUFWK1IwQXlqRDg2YzA5UmlWMkFGaWVSWmt6MlEyZ0Nqc0FMTTN3WnhUM0hxdXpBOENTTEw3TXdHNEFLN01Ed0hJTWYyYmpubVJGQW9DbFdHaVpsWHVUMWZnS2dDVllYRm1CcndSWWlSMEFwbWY0c3hyM0xDc1FBRXpOUXNxcTNMdk16bGNBVE1uaVNRVytFbUJtZGdDWWp1RlBOZTVwWmlRQW1JcUZrcXJjMjh4R0FEQU5DeVRWdWNlWmlRQmdDaFpHVXJqWG1ZVmZBbVFvaXlHSi9ISWdNN0FEd0RDR1ArazhBNHdrQUJqQ3dnZC9lQllZUlFCd09nc2V2T1daWUFRQndLa3NkUEE1endabkV3Q2N4Z0lIOTNsR09KTUE0QlFXTnRqR3M4SlpCQURkV2RCZ0g4OE1aeEFBZEdVaGcyTThPL1FtQU9qR0FnYlA4UXpSa3dDZ0N3c1h0T0Zab2hjQlFITVdMR2pMTTBVUEFvQ21MRlRRaDJlTDFnUUFBQVFTQURUakRRWDY4b3pSa2dDZ0NRc1RuTU96UmlzQ2dLZFprT0JjbmpsYUVBQTh4VUlFWTNqMmVKWUE0REFMRUl6bEdlUVpBZ0FBQWdrQUR2SG1BWFB3TEhLVUFHQTNDdzdNeFRQSkVRS0FYU3cwTUNmUEpuc0pBQUFJSkFEWXpCc0d6TTB6eWg0Q2dFMHNMTEFHenlwYkNRQWVzcURBV2p5emJDRUFBQ0NRQU9BdWJ4S3dKczh1ajN3ZGZRRE15d0t5dGk4L2Z6WDVPZTZEZGYzKy9xM1pmVUE5QWdBVzEzdUJ2L1h6aFFHczdhK1hIMy8vTS9vZ21JL0ZmVTZ6djgyNWIrWTArMzNER0FLQUR5emljMWwxOFhZZnpXWFYrNGgrZkFVQUU2cXdXRitmZ3hpQStkZ0I0QTBMOVRnVmh2NFc3ckZ4VXU0eHRyRURBSVAxV3BSYkRkcld4L2Y2ODRRQWpHVUhnUCt6SUo5cjlUL1RXLzM0VTlrRjRKVWRBRGhSaThWM2xvSDUvamlPbnB2ZkZZQXg3QUJ3dVZ3c3ZHZDRadml2OXZra25ldUs3QUp3dVFnQUxoYmMzbzR1dGxVK2wvVHpuNVVJd0ZjQTBNbVJCYmJpMExzK3B6M1h4QzhMUWw5MkFNSlpYUHZZTy96VFBnZlhadzUyQWJMWkFZQ0dETFp0WHM5NzYvV3lHd0R0MlFFSVpqRnRhOC93ZCszZmN1M0dzUXVReXc0QVBNbndldDZlSFFHN0FkQ0dIWUJRRnM4MnRnNS8xM3NmMS9WY2RnRXl2WXcrQUZpVklkWFAxbXRtY01GeGRnQUNHVWpQTWZqUDVYcWZRMHpsc1FNQU94aEc1N01iQUgzWUFRaGpNQjIzWmNDNHZuMzVEUG9TVVZuc0FNQUdCczhjdGx4alF3eTJFUUR3Z09FL0Z4RUFiZmdLSUlnaHRkK2pRZUthanVYemFVODg1YkFEQURjWUx2Tjc5QmtZWm5DYkFBaGhXTzFqK0s5REJMVGwzczRoQU9BZHczODlJZ0QyRXdCd3hmQmZsd2lBZlFSQUFFTnJHOE4vZlNLZ0RmZDZCZ0VBRzFnUTErR3pnbTBFUUhFV3cyM3V2Um02aHV1NTk1blpCZGpHZlYrZkFDQ2U0VitUQ0lEN0JBRFJESUpjUG52U0NZREN2TDAreC9WYm44L3dPYTVmYlFLQVdMYitNL2dxQUQ0bkFJaGsrR2NSQWZDUkFDaktFQU5hc0piVUpRQ0k0KzAvazEwQWVFc0FFTVh3enlZQzREOENBQUFDQ1lDQ3ZNbCt6dHMvbDR0ZGdDTThIelVKQU9KWjNQTDR6RUVBRU1LYkhWdTVWMGdoQUlyeFp2T1JyWDgrNDZ1QWZUd3I5UWdBQUFna0FJamxqUWIzQU1rRUFLWFp5dVVvOXc3VmZSMTlBREJDMnB2ZjNtR1dkSDErZi85bTJCTkpBQlNTdEdodmtieW9QM3Z1Ny8vNzFIdnJ5ODlmc2VmK0diRlVpNjhBaUZONVFmL3k4MWVYQmJyWHo1MUY1WHNDYmhFQWxGUjVXSDNtckFGZFBRUStrM2ErNUJBQVJLbjJwamRxSUZjTWdXcjNCandpQUlxd2VHV1paUURQY2h5Y3gxcFRod0Nnbk9vRGFjYnptL0dZV3FwK2ZtUVNBTVNvOE9ZeTh5Q2ErZGkycW5DUHdGYitEQkFXc01wd2ZUMU9neFRtWndlQVVsWVpsSHVzZUU0ckh2TWpGYytKYkFLQUNLdStrYTQ4ZEZZOTlsWHZGZGhMQUJSZ3dRTE9aTTJwUVFCUXhxcHZuTGRVT0o4SzUzQ3Qydm1RVFFCUTNvcHZLNVVHellybnN1STlBM3NKQUpqTWlnUHprWXJuQktzVEFBQVFTQURBUkNxL0tWYytOMWlSQUtDRVc4UEZkN2tjZGV2ZUVUSlVJUUJnRWdtREplRWNZUlVDQUFBQ0NZREYyZUt1SWVuTk9PbGNLN1AyckU4QUFFQWdBUUNESmI0Uko1NHp6RVlBc0R4L0FVQXYvaEtBeWdRQUFBUVNBQUFRU0FEQVFNbGJ5Y25uRGpNUUFBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFESlQ4dnl4T1BuZVlnUUFBZ0VBQ0FBQUNDUUNXZDJzcjJmOXVsbWZkdW9kOGZVRUZBZ0FHU3h3bWllY01zeEVBQUJCSUFDek9ObmNOU1cvRVNlZGFtYlZuZlFJQUFBSUpBSmhFd3B0eHdqbkNLZ1FBSmZoTEFGcnpGd0JVSndCZ0lwV0hTK1Z6Z3hVSkFBQUlKQUJnTWhYZmxDdWVFNnhPQUZEZWlyOEhVR2xncm5ndUs5NHpzSmNBb0l3VkI4MDlGYzZud2psY3EzWStaQk1BQlhoYkFjNWt6YWxCQUJCaDFRVnI1VGZPVlk5OTFYc0Y5aElBbExMcTBMbG54WE5hOFpnZnFYaE9aUHM2K2dDQXgxNkh6K3h2cDRZa3JNTU9BREZtSDU1YnpEeGdaejYyclNyY0k3Q1ZBS0NjQ29Qb25oblBiOFpqYXFuNitaRkpBQlRoelNYTDcrL2ZwaGhLc3h3SDU3SFcxQ0VBaUZKdDhSbzFnQ3NPL21yM0Jqd2lBQ2lwMm5CNjVLeUJYSEh3UDVKMnZ1UVFBTVNwL0tiWGEwQlhIL3lWN3dtNHhaOEJGdkxsNTYvU2kvUmV2NzkvaTEzWTM5OEhlNitEKytnUDErR3QxT2VwS2dGQXBMUllTanJYdlF3MVV2a0tnTklNUG81eTcxQ2RBQ0NXTnovY0F5UVRBQUFRU0FBVTQ0M21vM3RidWE1WHJudWZ2ZTMvanp3cjlRZ0FJbGpRMmNxOVFnb0JRRHh2Tm5sODVpQUFTcks0ZmM1WEFWd3V0djZQOEh6VUpBQUFJSkFBSUlwZGdHemUvdUUvQW9BNElpQ1Q0UTl2Q1lDaURES2dCV3RKWFFLQVNIWUJzbmo3aDQ4RUFMRkVRQWJESHo0bkFBb3p4SjdqK3EzUFovZ2MxNjgyQVVBMGI0QzVmUGFrRXdERTgxVkFUYmIrNFQ0QlVKd0J0bzBJcU1Yd2Y1Nzd2ajRCQUJ0WUROZmhzNEp0QkVBQUMrSTJqOTRNWGNmNVBmcU12UDF2NDE3UElBRGdpZ2hZbCtFUCt3Z0FlRWNFck1md2gvMEVRQWhEYXg4UnNBN0R2eTMzZGc0QkFEZUlnUGtaL25EY1h5OC8vdjVuOUVGd0hndmlmbHNHdmV0NkxwOUpINkkyaXgwQWVHRExJTEZ3bnNmd2h6WUVBR3dnQXVaZytFTTd2Z0lJWklFOGJ1dVFkNDNiY3QzN0U3QjU3QURBRGxzSGpNVzBIY01mK3JBREVNcGkrVHlEcVMvWDl6eUNOWk1kQURqSWJrQS9oai8wWndjZ21NV3pqVDBEM2pXL3o3VThuMEROOVhYMEFjRHFYZ2ZSbG9YMDlkOFlYbThaL0hBK093RGhMS1p0N1gyYlNyLytydGRZM3Y2ejJRR0FodmJzQmx6L3U3VEJadkREZUhZQXNMaDJjdVR0cXZwbjRack13OXMvZGdDZ2s3MjdBZS8vYlpYQmQzVFFWRGwvbUpVZEFDNlhpOFgyRE0rOGNhMzIrU1NkNjRxOC9YTzVDQUN1V0hqN2E3SHd6dm81VlQ2M1NneC9YdmtLQUU1MFBlQ09Mc1R2Lzd0UlE3UFZJREgwWVF3N0FMeGhNVDVmcnpleVZwL2w3TWZIZHQ3K3VXWUhBQVk3OHN1Q1c4eTYyQnY4TUFjN0FIeGdnUjV2MXVGOWxIdHF2R3IzRk0rekF3QVRhdkc3QXFNWitqQTNPd0I4eXVJOXA5bGp3SDB6cDludkc4WVFBTnhrTVYvRHFNWGQvYkVHdzU5YmZBVUFpN3MxaVAyWkhuQ1BIUUR1c3ZqRHVyejljOC9MNkFOZ2JoWVFXSk5ubDBjRUFBQUVFZ0E4NUUwQzF1S1paUXNCd0NZV0ZGaURaNVd0QkFDYldWaGdicDVSOWhBQUFCQklBTENMTnd5WWsyZVR2UVFBdTFsb1lDNmVTWTRRQUJ4aXdZRTVlQlk1U2dBQVFDQUJ3R0hlUEdBc3p5RFBFQUE4eFFJRVkzajJlSllBNEdrV0lqaVhaNDRXQkFCTldKRGdISjQxV2hFQU5HTmhncjQ4WTdRa0FBQWdrQUNnS1c4bzBJZG5pOVlFQU0xWnFLQXR6eFE5Q0FDNnNHQkJHNTRsZWhFQWRHUGhndWQ0aHVoSkFOQ1ZCUXlPOGV6UW13Q2dPd3NaN09PWjRRd0NnRk5ZMEdBYnp3cG5FUUNjeHNJRzkzbEdPSk1BNEZRV09QaWNaNE96Q1FCT1o2R0R0endUakNBQUdNS0NCMzk0RmhoRkFEQ01oWTkwbmdGRytqcjZBTWoydWdEKy92NXQ4SkhBZVF4K1ptQUhnQ2xZRUVuaFhtY1dBb0JwV0JpcHpqM09UQVFBVTdGQVVwVjdtOWtJQUtaam9hUWE5elF6OGt1QVRNa3ZCMUtCd2MvTTdBQXdOUXNvcTNMdk1qc0J3UFFzcEt6R1Bjc0tmQVhBRW53bHdBb01mbFppQjRDbFdHQ1psWHVUMVFnQWxtT2haVGJ1U1Zia0t3Q1c1Q3NCWm1Ed3N6STdBQ3pOQXN3bzdqMVdad2VBNWRrTjRFd0dQMVhZQWFBTUN6Tzl1Y2VveEE0QXBkZ05vQWVEbjRvRUFDVUpBVm93K0tsTUFGQ2FFT0FJZzU4RWZnZUFDQlowdG5LdmtNSU9BREhzQm5DUHdVOGFBVUFjSWNBMWc1OVVBb0JZUWlDYndVODZBVUE4SVpERjRJYy9CQUQ4U3dqVVp2RERXd0lBM3JrZUZHSmdiWVkrM0NZQTRBNjdBbXN5K09FeEFRQWIyQldZbjZFUCt3Z0EyTW11d0Z3TWZqaEdBTUJCZGdYR01mVGhlUUlBR2hBRC9SbjYwSllBZ01iZUR5cEJjSXlCRDMwSkFPak03c0IyaGo2Y1J3REFpVDRiY0tsUllOakRXQUlBQmt2NXlzREFoN2tJQUpqTXJVRzVTaGdZOUxBR0FRQ0wyREpZZTBlQzRRNTFDQUFveElBR3Rub1pmUUFBd1BrRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRU9oLytVQlpmTTZ3TWl3QUFBQUFTVVZPUks1Q1lJST0iLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIiwicHVycG9zZSI6Im1hc2thYmxlIn1dfQ==">
+    <meta name="theme-color" content="#0284c7">
+    <script>
+        window.__gapiReady = false;
+        window.__gisReady = false;
+        window.gapiLoaded = function () {
+            window.__gapiReady = true;
+            if (window.__onGapiLoaded) window.__onGapiLoaded();
+        };
+        window.gisLoaded = function () {
+            window.__gisReady = true;
+            if (window.__onGisLoaded) window.__onGisLoaded();
+        };
+    </script>
+    <script src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+    <script src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+
+        html {
+            background: #111;
+            overscroll-behavior-y: none;
+        }
+
+        body { 
+            background: transparent; 
+            color: #fff; 
+            width: 100vw;
+            min-height: 100vh; 
+            display: flex; 
+            flex-direction: column;
+            justify-content: flex-start; 
+            align-items: center; 
+            padding: 0; 
+            overflow-x: hidden;
+            position: relative;
+            overscroll-behavior-y: none;
+        }
+
+        #bg-canvas-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -99;
+            background: #111 center center / cover no-repeat;
+        }
+
+        #bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .top-bar { 
+            position: absolute;
+            top: 6px;
+            right: 10px;
+            z-index: 10;
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .btn-gallery {
+            background: rgba(0, 0, 0, 0.5);
+            color: #cbd5e1;
+            padding: 5px 10px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(4px);
+            transition: 0.2s;
+        }
+        .btn-gallery:hover { background: rgba(0, 0, 0, 0.8); color: #fff; border-color: #38bdf8; }
+        
+        .swipe-wrapper { width: 100%; max-width: 100%; overflow: hidden; border-radius: 0; touch-action: pan-y; z-index: 2; flex: 1; }
+        .swipe-container { display: flex; width: 400%; height: 100%; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); will-change: transform; transform: translateZ(0); backface-visibility: hidden; }
+        .tab-pane { width: 25%; flex-shrink: 0; padding: 4px; display: flex; flex-direction: column; }
+
+        .drive-status-line { font-size: 10.5px; color: #f87171; margin-top: 4px; min-height: 13px; }
+        .drive-status-line.ok { color: #4ade80; }
+
+        .panel-box { padding: 16px; background: transparent; display: flex; flex-direction: column; justify-content: space-between; min-height: 100vh; width: 100%; }
+        
+        .text-center { text-align: center; }
+        .title { font-size: 22px; font-weight: bold; color: #38bdf8; text-shadow: 0 2px 4px rgba(0,0,0,0.9); letter-spacing: 1px; }
+        .subtitle { font-size: 11px; color: #e2e8f0; margin-top: 2px; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
+        
+        .disc-box { width: 80px; height: 80px; background: rgba(0, 0, 0, 0.6); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 10px auto; border: 2px solid rgba(56, 189, 248, 0.8); box-shadow: 0 0 15px rgba(56, 189, 248, 0.5); }
+        .disc-box span { font-size: 34px; }
+        
+        .track-title-wrap { width: 250px; overflow: hidden; margin: 0 auto; white-space: nowrap; }
+        .track-title { display: inline-block; font-size: 15px; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.9); padding-left: 100%; animation: marquee 12s linear infinite; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+        .track-artist { font-size: 12px; color: #cbd5e1; margin-top: 2px; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
+        
+        .progress-container { margin: 10px 0; }
+        .time-info { display: flex; justify-content: space-between; font-size: 11px; color: #e2e8f0; margin-bottom: 4px; font-weight: bold; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
+        input[type="range"] { width: 100%; accent-color: #38bdf8; cursor: pointer; height: 5px; background: rgba(255, 255, 255, 0.3); border-radius: 4px; }
+        
+        .controls { display: flex; justify-content: center; align-items: center; gap: 16px; margin: 8px 0; }
+        .btn-control { background: none; border: none; color: #e2e8f0; font-size: 18px; cursor: pointer; transition: 0.2s; padding: 4px; text-shadow: 0 2px 5px rgba(0,0,0,0.8); }
+        .btn-control:hover { color: #38bdf8; }
+        .btn-play { width: 44px; height: 44px; background: #0284c7; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); cursor: pointer; border: none; transition: transform 0.1s; }
+        .btn-play:active { transform: scale(0.95); }
+
+        .mode-controls { display: flex; justify-content: center; gap: 12px; margin-bottom: 8px; }
+        .btn-mode { background: rgba(0, 0, 0, 0.4); color: #cbd5e1; padding: 4px 10px; border-radius: 12px; font-size: 11px; cursor: pointer; transition: 0.2s; border: none; }
+        .btn-mode.active-mode { background: #0284c7; color: #fff; font-weight: bold; }
+        
+        .section-box { background: rgba(0, 0, 0, 0.4); padding: 8px; border-radius: 10px; max-height: 140px; overflow-y: auto; margin-bottom: 6px; }
+        .section-box h3 { font-size: 11px; text-transform: uppercase; color: #38bdf8; margin-bottom: 4px; font-weight: bold; letter-spacing: 0.5px; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
+        
+        .lyrics-container { flex: 1; min-height: 55vh; max-height: calc(100vh - 160px); overflow-y: auto; background: rgba(0, 0, 0, 0.4); padding: 12px; border-radius: 10px; scroll-behavior: smooth; margin-top: 6px; margin-bottom: 24px; }
+        .lyrics-container ul { list-style: none; text-align: center; }
+        .lyrics-container li { padding: 10px 4px; font-size: 14px; color: #cbd5e1; transition: 0.2s; background: none; border: none; text-shadow: 0 1px 3px rgba(0,0,0,0.9); }
+        .lyrics-container li:hover { background: none; color: #fff; }
+        .lyrics-container li.active-lyric { color: #38bdf8; font-size: 16px; font-weight: bold; text-shadow: 0 0 10px rgba(56, 189, 248, 0.8), 0 2px 4px rgba(0,0,0,0.9); transform: scale(1.05); }
+
+        .search-lyrics-box { display: flex; gap: 6px; margin-bottom: 4px; }
+        .sync-controls { display: flex; gap: 12px; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.6); padding: 6px 20px 6px 6px; border-radius: 8px; margin-bottom: 6px; }
+
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: flex; justify-content: center; align-items: center; z-index: 999; }
+        .modal-box { background: rgba(17, 17, 17, 0.95); border: 1px solid #38bdf8; padding: 16px; border-radius: 14px; width: 90%; max-width: 420px; display: flex; flex-direction: column; gap: 8px; max-height: 80vh; }
+        .modal-box h3 { color: #38bdf8; font-size: 13px; text-align: center; }
+        .search-results-list { overflow-y: auto; max-height: 250px; display: flex; flex-direction: column; gap: 4px; }
+        .search-result-item { background: #222; padding: 8px; border-radius: 6px; cursor: pointer; font-size: 11px; border: 1px solid #333; transition: 0.2s; }
+        .search-result-item:hover { border-color: #38bdf8; background: #2a2a2a; }
+
+        ul { list-style: none; }
+        #track-list li, #playlist-container li, #drive-track-list li, #drive-playlist-container li { padding: 5px 8px; border-radius: 6px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: #cbd5e1; transition: 0.2s; margin-bottom: 3px; background: rgba(0, 0, 0, 0.2); }
+        #track-list li:hover, #playlist-container li:hover, #drive-track-list li:hover, #drive-playlist-container li:hover { background: rgba(0, 0, 0, 0.4); color: #fff; }
+        #track-list li.active, #playlist-container li.active, #drive-track-list li.active, #drive-playlist-container li.active { background: rgba(2, 132, 199, 0.8); border: 1px solid rgba(56, 189, 248, 0.8); color: #e0f2fe; font-weight: bold; }
+        
+        .btn-action { background: #0284c7; color: #fff; border: none; padding: 5px 8px; border-radius: 6px; font-size: 10px; cursor: pointer; font-weight: 500; transition: background 0.2s; display: inline-flex; align-items: center; gap: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.5); }
+        .btn-action:hover { background: #0369a1; }
+        
+        .input-group { display: flex; gap: 6px; margin-bottom: 4px; }
+        .input-text { width: 100%; background: rgba(0, 0, 0, 0.6); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 6px; padding: 4px 8px; font-size: 11px; color: #fff; outline: none; }
+        .input-text:focus { border-color: #38bdf8; }
+        
+        .badge { font-size: 9px; background: rgba(0, 0, 0, 0.8); padding: 2px 5px; border-radius: 8px; color: #e2e8f0; }
+        .btn-del { background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 10px; padding: 2px 4px; transition: color 0.2s; }
+        .btn-del:hover { color: #f87171; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+    <div id="bg-canvas-container"></div>
+    <div id="bg-overlay"></div>
+
+    <div class="top-bar">
+        <button class="btn-gallery" onclick="toggleFullScreen()">⛶ Fullscreen</button>
+        <label for="custom-bg-input" class="btn-gallery">Latar</label>
+        <input type="file" id="custom-bg-input" accept="image/*" class="hidden">
+    </div>
+
+    <div class="swipe-wrapper" id="swipe-wrapper">
+        <div class="swipe-container" id="swipe-container">
+            <!-- TAB 1: PEMUTAR MUSIK -->
+            <div class="tab-pane">
+                <div class="panel-box">
+                    <div>
+                        <div class="text-center">
+                            <h1 class="title">⚡ LP Player</h1>
+                            <p id="active-playlist-name" class="subtitle">Playlist Aktif: Favorit</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="disc-box"><span id="disc-icon">💿</span></div>
+                            <div class="track-title-wrap">
+                                <h2 id="track-title" class="track-title">Pilih lagu...</h2>
+                            </div>
+                            <p id="track-artist" class="track-artist">-</p>
+                        </div>
+                        <div class="progress-container">
+                            <div class="time-info"><span id="current-time">0:00</span><span id="duration">0:00</span></div>
+                            <input type="range" id="progress-bar" value="0" max="100">
+                        </div>
+                        <div class="mode-controls">
+                            <button id="btn-shuffle" class="btn-mode" onclick="setPlayMode('shuffle')">🔀 Acak</button>
+                            <button id="btn-repeat1" class="btn-mode" onclick="setPlayMode('repeat1')">🔂 Ulangi 1</button>
+                            <button id="btn-normal" class="btn-mode active-mode" onclick="setPlayMode('normal')">🔁 Putar ke Atas</button>
+                        </div>
+                        <div class="controls">
+                            <button id="prev-btn" class="btn-control">⏮</button>
+                            <button id="play-btn" class="btn-play"><span id="play-icon">▶</span></button>
+                            <button id="next-btn" class="btn-control">⏭</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="section-box" id="list-container-box">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                                <h3 style="color: #38bdf8; font-size: 11px;">Daftar Lagu</h3>
+                                <label for="multi-file-input" class="btn-action" style="cursor: pointer;">📁 Ambil Lagu</label>
+                                <input type="file" id="multi-file-input" accept="audio/*" multiple class="hidden">
+                            </div>
+                            <ul id="track-list"><li><span style="color: #cbd5e1; font-style: italic; font-size: 10px;">Ketuk "Ambil Lagu" untuk memilih file.</span></li></ul>
+                        </div>
+                        <div class="section-box" style="margin-bottom: 0;">
+                            <h3 style="color: #38bdf8; font-size: 11px; margin-bottom: 4px;">Daftar Playlist</h3>
+                            <div class="input-group">
+                                <input type="text" id="new-playlist-name" class="input-text" placeholder="Buat playlist baru...">
+                                <button id="create-playlist-btn" class="btn-action">Buat</button>
+                            </div>
+                            <ul id="playlist-container" style="max-height: 60px; overflow-y: auto;"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: LIRIK -->
+            <div class="tab-pane">
+                <div class="panel-box" style="display: flex; flex-direction: column; height: 100vh;">
+                    <div>
+                        <div class="sync-controls" id="sync-controls">
+                            <span style="font-size:10px; color:#cbd5e1; margin-right:4px;">⏱️ Pas-kan Waktu:</span>
+                            <button class="btn-action" style="background:#475569;" onclick="shiftLyricsTime(0.5)">⏪ Mundur</button>
+                            <button class="btn-action" style="background:#475569;" onclick="shiftLyricsTime(-0.5)">Maju ⏩</button>
+                        </div>
+                        <div class="search-lyrics-box">
+                            <div style="position: relative; flex: 1;">
+                                <input type="text" id="lyrics-search-input" class="input-text" style="width: 100%; padding-right: 26px;" placeholder="Ketik Judul / Artis" autocomplete="off">
+                                <button type="button" id="lyrics-search-clear-btn" onclick="lyricsSearchInput.value=''; updateLyricsClearBtn(); lyricsSearchInput.focus();" style="display:none; position:absolute; right:4px; top:50%; transform:translateY(-50%); background:none; border:none; color:#94a3b8; font-size:14px; line-height:1; padding:4px; cursor:pointer;">✕</button>
+                            </div>
+                            <button class="btn-action" onclick="searchLyricsDirect()">Cari</button>
+                        </div>
+                    </div>
+                    <div id="lyrics-display" class="lyrics-container">
+                        <ul><li style="color: #e2e8f0; font-style: italic;">Pilih lagu atau ketik pencarian lirik di atas...</li></ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: GOOGLE DRIVE -->
+            <div class="tab-pane">
+                <div class="panel-box">
+                    <div>
+                        <div class="text-center">
+                            <h1 class="title">☁️ Drive Player</h1>
+                            <p id="active-drive-playlist-name" class="subtitle">Playlist Aktif: Utama</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="disc-box"><span id="drive-disc-icon">💿</span></div>
+                            <div class="track-title-wrap">
+                                <h2 id="drive-track-title" class="track-title">Belum ada lagu...</h2>
+                            </div>
+                            <p id="drive-track-artist" class="track-artist">-</p>
+                        </div>
+                        <div class="progress-container">
+                            <div class="time-info"><span id="drive-current-time">0:00</span><span id="drive-duration">0:00</span></div>
+                            <input type="range" id="drive-progress-bar" value="0" max="100">
+                        </div>
+                        <div class="mode-controls">
+                            <button id="drive-btn-shuffle" class="btn-mode" onclick="setDrivePlayMode('shuffle')">🔀 Acak</button>
+                            <button id="drive-btn-repeat1" class="btn-mode" onclick="setDrivePlayMode('repeat1')">🔂 Ulangi 1</button>
+                            <button id="drive-btn-normal" class="btn-mode active-mode" onclick="setDrivePlayMode('normal')">🔁 Putar ke Atas</button>
+                        </div>
+                        <div class="controls">
+                            <button id="drive-prev-btn" class="btn-control">⏮</button>
+                            <button id="drive-play-btn" class="btn-play"><span id="drive-play-icon">▶</span></button>
+                            <button id="drive-next-btn" class="btn-control">⏭</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="section-box" style="max-height: 108px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                                <h3 style="color: #38bdf8; font-size: 11px;">Cari Lagu / Tambah Link</h3>
+                                <button class="btn-action" style="font-size: 9px; padding: 3px 6px;" onclick="openBulkDriveModal()">📋 Banyak</button>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="drive-search-input" class="input-text" placeholder="🔍 Cari judul lagu di daftar...">
+                                <button id="drive-search-clear-btn" class="btn-action" style="display:none;">✖</button>
+                            </div>
+                            <div class="drive-status-line" id="drive-status-line"></div>
+                        </div>
+                        <div class="section-box" id="drive-list-container-box">
+                            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                                <h3 style="color: #38bdf8; font-size: 11px;">Daftar Lagu Drive</h3>
+                                <button class="btn-action" id="drive-bulk-mode-btn" style="font-size: 9px; padding: 3px 6px;">🗑 Hapus Massal</button>
+                            </div>
+                            <div id="drive-bulk-toolbar" style="display:none; gap:4px; margin-bottom:4px; flex-wrap:wrap;">
+                                <button class="btn-action" id="drive-bulk-select-all-btn" style="font-size:9px; padding:3px 6px;">Pilih Semua</button>
+                                <button class="btn-action" id="drive-bulk-delete-btn" style="font-size:9px; padding:3px 6px; background:#dc2626;">Hapus Terpilih (0)</button>
+                                <button class="btn-action" id="drive-bulk-cancel-btn" style="font-size:9px; padding:3px 6px; background:#444;">Batal</button>
+                            </div>
+                            <ul id="drive-track-list"><li><span style="color: #cbd5e1; font-style: italic; font-size: 10px;">Belum ada lagu — tempel link di atas.</span></li></ul>
+                        </div>
+                        <div class="section-box" style="margin-bottom: 0;">
+                            <h3 style="color: #38bdf8; font-size: 11px; margin-bottom: 4px;">Daftar Playlist</h3>
+                            <div class="input-group">
+                                <input type="text" id="new-drive-playlist-name" class="input-text" placeholder="Buat playlist baru...">
+                                <button id="create-drive-playlist-btn" class="btn-action">Buat</button>
+                            </div>
+                            <ul id="drive-playlist-container" style="max-height: 60px; overflow-y: auto;"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 4: JELAJAH DRIVE -->
+            <div class="tab-pane">
+                <div class="panel-box">
+                    <div>
+                        <div class="text-center">
+                            <h1 class="title">🗂️ Jelajah Drive</h1>
+                            <p class="subtitle">Login sekali, lalu tap langsung lagu dari Drive-mu</p>
+                        </div>
+                        <div class="section-box" style="margin-top: 16px; text-align: center; padding: 16px; max-height: none;">
+                            <p id="browse-login-status" style="font-size: 12px; color: #cbd5e1; margin-bottom: 10px;">Belum login</p>
+                            <button class="btn-action" style="width: 100%; justify-content: center; padding: 10px; font-size: 12px; margin-bottom: 8px;" onclick="loginGoogleDrive()">🔑 Login Google Drive</button>
+                            <button id="browse-open-picker-btn" class="btn-action" style="width: 100%; justify-content: center; padding: 10px; font-size: 12px;" onclick="openDriveBrowser()" disabled>📂 Buka &amp; Pilih Lagu di Drive</button>
+                            <button id="browse-logout-btn" class="btn-del hidden" style="margin-top: 8px; font-size: 11px;" onclick="logoutGoogleDrive()">Keluar dari akun Google</button>
+                        </div>
+                        <p style="font-size: 10px; color: #94a3b8; text-align: center; margin-top: 12px; line-height: 1.5;">
+                            Lagu yang dipilih akan otomatis masuk ke playlist aktif "<span id="browse-target-playlist">Utama</span>" di Tab Drive Player, lalu bisa langsung diputar di sana.
+                        </p>
+                    </div>
+                    <div style="background: rgba(0,0,0,0.4); border-radius: 10px; padding: 10px; font-size: 10px; color: #94a3b8; line-height: 1.6;">
+                        ⚠️ <strong style="color:#38bdf8;">Setup sekali saja:</strong> fitur ini butuh API Key &amp; Client ID dari Google Cloud milikmu sendiri.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Pencarian -->
+    <div id="search-modal" class="modal-overlay hidden">
+        <div class="modal-box">
+            <h3>Pilih Lirik yang Sesuai:</h3>
+            <div id="search-results-list" class="search-results-list"></div>
+            <div class="modal-buttons" style="display: flex; justify-content: flex-end; margin-top: 4px;">
+                <button class="btn-action" style="background:#444;" onclick="closeSearchModal()">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Tambah Banyak Link Drive -->
+    <div id="bulk-drive-modal" class="modal-overlay hidden">
+        <div class="modal-box">
+            <h3>Tambah Banyak Link Drive</h3>
+            <p style="font-size: 10px; color: #cbd5e1; text-align: center;">Tempel banyak link Google Drive, satu link per baris. Lagu akan masuk ke playlist "<span id="bulk-drive-target-playlist"></span>".</p>
+            <textarea id="bulk-drive-textarea" class="input-text" style="min-height: 140px; resize: vertical; font-size: 11px;" placeholder="Tempel banyak link di sini, satu per baris..."></textarea>
+            <div class="drive-status-line" id="bulk-drive-status-line"></div>
+            <div class="modal-buttons" style="display: flex; justify-content: flex-end; gap: 6px; margin-top: 4px;">
+                <button class="btn-action" style="background:#444;" onclick="closeBulkDriveModal()">Tutup</button>
+                <button class="btn-action" id="bulk-drive-add-btn">➕ Tambahkan Semua</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Browser Drive Sendiri -->
+    <div id="drive-browser-modal" class="modal-overlay hidden">
+        <div class="modal-box" style="max-width: 480px;">
+            <h3>Pilih Lagu dari Google Drive</h3>
+            <div id="drive-browser-breadcrumb" style="font-size: 10px; color: #94a3b8; text-align: center; word-break: break-word;"></div>
+            <div id="drive-browser-list" style="overflow-y: auto; max-height: 320px; display: flex; flex-direction: column; gap: 4px;"></div>
+            <div class="drive-status-line" id="drive-browser-status-line"></div>
+            <div class="modal-buttons" style="display: flex; justify-content: space-between; align-items: center; gap: 6px; margin-top: 4px;">
+                <button class="btn-action" style="background:#444;" onclick="closeDriveBrowserModal()">Tutup</button>
+                <button class="btn-action" id="drive-browser-add-btn" onclick="addSelectedDriveFiles()">➕ Tambahkan Terpilih (<span id="drive-browser-count">0</span>)</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio-player" playsinline></audio>
+    <audio id="silent-audio" loop playsinline src="data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA"></audio>
+    <audio id="drive-audio-player" playsinline preload="auto"></audio>
+
+    <script>
+        const GOOGLE_API_KEY = 'AIzaSyDns5jgchgxakh7q7NmoqEpzBOgsYwZjsU';
+        const GOOGLE_CLIENT_ID = '540502607786-0l6tk6jra9cnjubsrbu3rns4p79198oi.apps.googleusercontent.com';
+
+        // --- SISTEM ANTI-TIDUR (KEEP ALIVE UNTUK BACKGROUND PLAY) ---
+        let bgAudioCtx = null;
+        let bgOscillator = null;
+
+        function aktifkanAntiTidur() {
+            try {
+                if (!bgAudioCtx) {
+                    bgAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                }
+                if (bgAudioCtx.state === 'suspended') {
+                    bgAudioCtx.resume();
+                }
+                if (!bgOscillator) {
+                    bgOscillator = bgAudioCtx.createOscillator();
+                    let gainNode = bgAudioCtx.createGain();
+                    gainNode.gain.value = 0; // Volume nol (bisu total)
+                    bgOscillator.connect(gainNode);
+                    gainNode.connect(bgAudioCtx.destination);
+                    bgOscillator.start();
+                }
+            } catch (e) { console.log("AudioContext fallback error", e); }
+        }
+
+        // Aktifkan anti-tidur saat layar pertama disentuh
+        document.body.addEventListener('click', aktifkanAntiTidur, { once: true });
+
+        const bgContainer = document.getElementById('bg-canvas-container');
+
+        function setBackgroundImage(src) {
+            bgContainer.style.backgroundImage = `url('${src}')`;
+        }
+
+        function toggleFullScreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.log("Error attempting to enable fullscreen:", err);
+                });
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        }
+
+        const customBgInput = document.getElementById('custom-bg-input');
+        customBgInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                const img = new Image();
+                img.onload = () => {
+                    // Batasi cuma untuk foto yang BENAR-BENAR besar (di atas resolusi layar umum),
+                    // supaya kualitas tetap tajam tapi tidak memakan memori berlebihan.
+                    const MAX_DIM = 2400;
+                    let { width, height } = img;
+                    if (width > MAX_DIM || height > MAX_DIM) {
+                        if (width >= height) { height = Math.round(height * (MAX_DIM / width)); width = MAX_DIM; }
+                        else { width = Math.round(width * (MAX_DIM / height)); height = MAX_DIM; }
+                    }
+
+                    const canvas = document.createElement('canvas');
+                    canvas.width = width; canvas.height = height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, width, height);
+                    const highQuality = canvas.toDataURL('image/jpeg', 0.92);
+
+                    setBackgroundImage(highQuality);
+                    // Simpan ke IndexedDB (kapasitas jauh lebih besar daripada localStorage)
+                    setSettingToDB('lp_custom_bg', highQuality, (ok) => {
+                        if (!ok) alert('Background terpasang, tapi gagal disimpan permanen. Coba foto lain.');
+                    });
+                    // Bersihkan sisa data lama di localStorage kalau ada, supaya tidak bentrok
+                    try { localStorage.removeItem('lp_custom_bg'); } catch (e) {}
+                };
+                img.onerror = () => alert('Gagal membaca gambar ini. Coba pilih foto lain.');
+                img.src = event.target.result;
+            };
+            reader.onerror = () => alert('Gagal membuka file ini.');
+            reader.readAsDataURL(file);
+        });
+
+        const swipeContainer = document.getElementById('swipe-container');
+        let currentTab = 0, wakeLock = null, localIntentionalPause = false;
+        // --- Anti-loncat saat layar mati / app di-background (khusus Google Drive player) ---
+        let driveWasPlayingWhenHidden = false;
+        let driveIndexWhenHidden = -1;
+        const TAB_COUNT = 4;
+
+        function switchTab(index) {
+            currentTab = index; 
+            swipeContainer.style.transform = `translate3d(-${index * (100 / TAB_COUNT)}%, 0, 0)`;
+            localStorage.setItem('lp_lastTab', index);
+            
+            setTimeout(() => {
+                if (index === 0) {
+                    const activeLi = document.querySelector('#track-list li.active');
+                    if(activeLi) activeLi.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else if (index === 1) {
+                    const activeLyric = document.querySelector('#lyrics-display li.active-lyric');
+                    if(activeLyric) activeLyric.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else if (index === 2) {
+                    const activeLi = document.querySelector('#drive-track-list li.active');
+                    if(activeLi) activeLi.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }, 350);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedCustomBg = localStorage.getItem('lp_custom_bg');
+            const initialSrc = savedCustomBg ? savedCustomBg : 'https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=2560&q=85';
+            setBackgroundImage(initialSrc);
+
+            const savedTab = localStorage.getItem('lp_lastTab');
+            if (savedTab !== null) {
+                let tabIndex = parseInt(savedTab);
+                if (!isNaN(tabIndex) && tabIndex >= 0 && tabIndex < TAB_COUNT) {
+                    swipeContainer.style.transition = 'none';
+                    switchTab(tabIndex);
+                    setTimeout(() => {
+                        swipeContainer.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+                    }, 50);
+                }
+            }
+        });
+
+        async function requestWakeLock() { try { if ('wakeLock' in navigator) wakeLock = await navigator.wakeLock.request('screen'); } catch (err) {} }
+        function releaseWakeLock() { if (wakeLock !== null) { wakeLock.release(); wakeLock = null; } }
+
+        let touchStartX = 0, touchStartY = 0, touchEndX = 0, touchEndY = 0, swipeIgnored = false;
+        const swipeWrapper = document.getElementById('swipe-wrapper');
+        swipeWrapper.addEventListener('touchstart', e => {
+            if (e.target.closest('input, textarea, select, button, .lyrics-container, .search-results-list, .drive-list-container-box, #drive-list-container-box, #playlist-container, #drive-playlist-container, #track-list, #drive-track-list')) {
+                swipeIgnored = true; return;
+            }
+            swipeIgnored = false;
+            touchStartX = e.changedTouches[0].screenX; touchStartY = e.changedTouches[0].screenY;
+        }, {passive: true});
+        swipeWrapper.addEventListener('touchend', e => {
+            if (swipeIgnored) return;
+            touchEndX = e.changedTouches[0].screenX; touchEndY = e.changedTouches[0].screenY; handleSwipe();
+        }, {passive: true});
+
+        function handleSwipe() {
+            let diffX = touchEndX - touchStartX, diffY = touchEndY - touchStartY;
+            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 40) {
+                if (diffX < 0 && currentTab < TAB_COUNT - 1) switchTab(currentTab + 1);
+                else if (diffX > 0 && currentTab > 0) switchTab(currentTab - 1);
+            }
+        }
+
+        let db, playlists = { "Favorit": [] }, currentPlaylistName = "Favorit", currentTrackIndex = 0;
+        let currentTrackId = null, currentObjectURL = null, syncedLyrics = [], rawLyricText = "", lastLyricTitle = "lirik_lagu";
+        let playMode = 'normal', hasRestoredTime = false, lastLyricIndex = -1;
+        let lyricsSaveMode = 'local';
+        let activeMediaSource = 'local';
+        function saveLyricsForCurrentSource(lyricsData) {
+            if (lyricsSaveMode === 'drive') saveDriveLyricsOffline(lyricsData);
+            else if (currentTrackId) updateSongLyricsInBackground(currentTrackId, lyricsData);
+        }
+
+        function setPlayMode(mode) {
+            playMode = mode;
+            document.getElementById('btn-normal').classList.remove('active-mode'); document.getElementById('btn-repeat1').classList.remove('active-mode'); document.getElementById('btn-shuffle').classList.remove('active-mode');
+            if (mode === 'normal') document.getElementById('btn-normal').classList.add('active-mode');
+            if (mode === 'repeat1') document.getElementById('btn-repeat1').classList.add('active-mode');
+            if (mode === 'shuffle') document.getElementById('btn-shuffle').classList.add('active-mode');
+        }
+
+        const audioPlayer = document.getElementById('audio-player'), silentAudioPlayer = document.getElementById('silent-audio');
+        const playBtn = document.getElementById('play-btn'), playIcon = document.getElementById('play-icon');
+        const prevBtn = document.getElementById('prev-btn'), nextBtn = document.getElementById('next-btn');
+        const progressBar = document.getElementById('progress-bar'), currentTimeEl = document.getElementById('current-time'), durationEl = document.getElementById('duration');
+        const trackTitle = document.getElementById('track-title'), trackArtist = document.getElementById('track-artist'), discIcon = document.getElementById('disc-icon');
+        const lyricsDisplay = document.getElementById('lyrics-display'), trackListEl = document.getElementById('track-list');
+        const playlistContainer = document.getElementById('playlist-container'), activePlaylistNameEl = document.getElementById('active-playlist-name');
+        const newPlaylistInput = document.getElementById('new-playlist-name'), createPlaylistBtn = document.getElementById('create-playlist-btn');
+        const multiFileInput = document.getElementById('multi-file-input'), lyricsSearchInput = document.getElementById('lyrics-search-input');
+        const lyricsSearchClearBtn = document.getElementById('lyrics-search-clear-btn');
+        function updateLyricsClearBtn() { lyricsSearchClearBtn.style.display = lyricsSearchInput.value ? 'block' : 'none'; }
+        lyricsSearchInput.addEventListener('input', updateLyricsClearBtn);
+        const searchModal = document.getElementById('search-modal'), searchResultsList = document.getElementById('search-results-list');
+
+        audioPlayer.addEventListener('play', () => { 
+            aktifkanAntiTidur();
+            playIcon.textContent = "⏸"; 
+            discIcon.style.animation = "spin 2s linear infinite"; 
+            activeMediaSource = 'local'; 
+            silentAudioPlayer.play().catch(e => {}); 
+            if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'playing'; 
+            updateMediaSessionPosition(audioPlayer);
+        });
+        audioPlayer.addEventListener('pause', () => { 
+            playIcon.textContent = "▶"; 
+            discIcon.style.animation = "none"; 
+            const wasIntentional = localIntentionalPause;
+            localIntentionalPause = false;
+            if (wasIntentional && driveAudio.paused) silentAudioPlayer.pause();
+            if ('mediaSession' in navigator && activeMediaSource === 'local') navigator.mediaSession.playbackState = 'paused'; 
+        });
+
+        if ('mediaSession' in navigator) {
+            navigator.mediaSession.setActionHandler('play', () => { if (activeMediaSource === 'drive') { driveAudio.play(); } else { playTrack(); } });
+            navigator.mediaSession.setActionHandler('pause', () => { if (activeMediaSource === 'drive') { driveIntentionalPause = true; driveAudio.pause(); } else { pauseTrack(); } });
+            navigator.mediaSession.setActionHandler('previoustrack', () => { if (activeMediaSource === 'drive') { drivePrevBtn.click(); } else { document.getElementById('prev-btn').click(); } });
+            navigator.mediaSession.setActionHandler('nexttrack', () => { if (activeMediaSource === 'drive') { driveNextBtn.click(); } else { document.getElementById('next-btn').click(); } });
+        }
+
+        function initDB() {
+            const request = indexedDB.open('LP_MusicPlayer_DB', 4);
+            request.onerror = () => console.log("Gagal membuka database.");
+            request.onsuccess = (e) => { db = e.target.result; loadDataFromDB(); loadCustomBgFromDB(); };
+            request.onupgradeneeded = (e) => {
+                let dbInstance = e.target.result;
+                if (!dbInstance.objectStoreNames.contains('songs')) dbInstance.createObjectStore('songs', { keyPath: 'id', autoIncrement: true });
+                if (!dbInstance.objectStoreNames.contains('settings')) dbInstance.createObjectStore('settings', { keyPath: 'key' });
+            };
+        }
+
+        function setSettingToDB(key, value, callback) {
+            if (!db) { if (callback) callback(false); return; }
+            try {
+                let transaction = db.transaction(['settings'], 'readwrite'), store = transaction.objectStore('settings');
+                let request = store.put({ key: key, value: value });
+                request.onsuccess = () => { if (callback) callback(true); };
+                request.onerror = () => { if (callback) callback(false); };
+            } catch (err) { console.warn('Gagal simpan setting:', err); if (callback) callback(false); }
+        }
+
+        function getSettingFromDB(key, callback) {
+            if (!db) { callback(undefined); return; }
+            let transaction = db.transaction(['settings'], 'readonly'), store = transaction.objectStore('settings');
+            let request = store.get(key);
+            request.onsuccess = (e) => callback(e.target.result ? e.target.result.value : undefined);
+            request.onerror = () => callback(undefined);
+        }
+
+        function loadCustomBgFromDB() {
+            getSettingFromDB('lp_custom_bg', (val) => {
+                if (val) setBackgroundImage(val);
+            });
+        }
+
+        function saveSongToDB(playlist, file, callback) {
+            let transaction = db.transaction(['songs'], 'readwrite'), store = transaction.objectStore('songs');
+            let request = store.add({ playlist: playlist, name: file.name, fileBlob: file, lyrics: null });
+            request.onsuccess = (e) => { if (callback) callback(e.target.result); };
+        }
+
+        function updateSongLyricsInBackground(songId, lyricsData) {
+            if (!songId || !db) return;
+            let transaction = db.transaction(['songs'], 'readwrite'), store = transaction.objectStore('songs'), getReq = store.get(songId);
+            getReq.onsuccess = (e) => { let record = e.target.result; if (record) { record.lyrics = lyricsData; store.put(record).onsuccess = () => { if (playlists[currentPlaylistName]) { let track = playlists[currentPlaylistName].find(t => t.id === songId); if (track) { track.lyrics = lyricsData; renderTracks(); } } }; } };
+        }
+
+        function loadDataFromDB() {
+            if (!db) return;
+            let transaction = db.transaction(['songs'], 'readonly'), store = transaction.objectStore('songs'), request = store.getAll();
+            request.onsuccess = (e) => {
+                let records = e.target.result; playlists = { "Favorit": [] };
+                records.forEach(rec => { if (!playlists[rec.playlist]) playlists[rec.playlist] = []; playlists[rec.playlist].push({ id: rec.id, name: rec.name, fileData: rec.fileBlob, lyrics: rec.lyrics || null }); });
+                let savedPlaylist = localStorage.getItem('lp_lastPlaylist'), savedTrackIndex = localStorage.getItem('lp_lastTrackIndex');
+                currentPlaylistName = (savedPlaylist && playlists[savedPlaylist]) ? savedPlaylist : "Favorit";
+                currentTrackIndex = (savedTrackIndex !== null && !isNaN(savedTrackIndex) && playlists[currentPlaylistName].length > parseInt(savedTrackIndex)) ? parseInt(savedTrackIndex) : 0;
+                renderPlaylists(); renderTracks();
+                if (playlists[currentPlaylistName] && playlists[currentPlaylistName].length > 0 && !audioPlayer.src) loadTrack(currentTrackIndex, false);
+            };
+        }
+
+        function deleteSongFromDB(id, callback) { let transaction = db.transaction(['songs'], 'readwrite'); transaction.objectStore('songs').delete(id).onsuccess = () => { if (callback) callback(); }; }
+
+        function switchPlaylist(name) {
+            currentPlaylistName = name; currentTrackIndex = 0; renderPlaylists(); renderTracks();
+            if (playlists[name] && playlists[name].length > 0) loadTrack(0, true);
+            else { localIntentionalPause = true; audioPlayer.pause(); audioPlayer.src = ''; trackTitle.textContent = "Pilih lagu..."; trackArtist.textContent = "-"; lyricsDisplay.innerHTML = "<ul><li style='color:#e2e8f0;'>Lirik kosong.</li></ul>"; syncedLyrics = []; rawLyricText = ""; currentTrackId = null; releaseWakeLock(); }
+        }
+
+        function deletePlaylist(name) {
+            if (name === 'Favorit') return;
+            if (confirm(`Yakin ingin menghapus playlist "${name}"?`)) {
+                let trackIds = playlists[name].map(t => t.id), transaction = db.transaction(['songs'], 'readwrite'), store = transaction.objectStore('songs');
+                trackIds.forEach(id => store.delete(id)); transaction.oncomplete = () => { delete playlists[name]; currentPlaylistName = "Favorit"; loadDataFromDB(); };
+            }
+        }
+
+        function renderPlaylists() {
+            playlistContainer.innerHTML = '';
+            Object.keys(playlists).forEach(name => {
+                const li = document.createElement('li'); if (name === currentPlaylistName) li.className = 'active';
+                li.innerHTML = `<div style="display: flex; align-items: center; gap: 6px; flex: 1; pointer-events: none;"><span>🎵</span><span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${name}</span></div><div style="display: flex; align-items: center; gap: 4px;"><span class="badge">${playlists[name].length}</span>${name !== 'Favorit' ? `<button class="btn-del delete-pl-btn">🗑</button>` : ''}</div>`;
+                li.addEventListener('click', (e) => { if (!e.target.closest('.delete-pl-btn')) switchPlaylist(name); });
+                if (li.querySelector('.delete-pl-btn')) li.querySelector('.delete-pl-btn').addEventListener('click', (e) => { e.stopPropagation(); deletePlaylist(name); });
+                playlistContainer.appendChild(li);
+            });
+            activePlaylistNameEl.textContent = `Playlist Aktif: ${currentPlaylistName}`;
+        }
+
+        createPlaylistBtn.addEventListener('click', () => {
+            const name = newPlaylistInput.value.trim();
+            if (!name) return alert('Nama playlist kosong!'); if (playlists[name]) return alert('Playlist sudah ada!');
+            playlists[name] = []; newPlaylistInput.value = ''; renderPlaylists(); switchPlaylist(name);
+        });
+
+        multiFileInput.addEventListener('change', (e) => {
+            const files = Array.from(e.target.files); if (files.length === 0) return; let addedCount = 0;
+            files.forEach(file => { if (file.type.startsWith('audio/') || file.name.match(/\.(mp3|wav|m4a|aac|flac|ogg)$/i)) { saveSongToDB(currentPlaylistName, file, () => { addedCount++; if (addedCount === files.length) loadDataFromDB(); }); } }); multiFileInput.value = '';
+        });
+
+        function renderTracks() {
+            trackListEl.innerHTML = ''; const tracks = playlists[currentPlaylistName];
+            if (!tracks || tracks.length === 0) { trackListEl.innerHTML = `<li><span style="color: #cbd5e1; font-style: italic; font-size: 10px;">Ketuk "Ambil Lagu" untuk memilih file.</span></li>`; return; }
+            tracks.forEach((track, index) => {
+                const li = document.createElement('li'); if (index === currentTrackIndex && audioPlayer.src) li.className = 'active';
+                li.innerHTML = `<span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; pointer-events: none;">${index + 1}. ${track.name}</span><div style="display:flex; align-items:center; gap:4px;">${track.lyrics ? `<span style="font-size:9px; background:#0284c7; color:#fff; padding:1px 4px; border-radius:4px;">📝 Lirik</span>` : ''}<button class="btn-del delete-track-btn">❌</button></div>`;
+                li.addEventListener('click', (e) => { if (e.target.closest('.delete-track-btn')) return; currentTrackIndex = index; hasRestoredTime = true; localStorage.setItem('lp_lastTime', 0); loadTrack(currentTrackIndex, true); });
+                li.querySelector('.delete-track-btn').addEventListener('click', (e) => { e.stopPropagation(); deleteSongFromDB(track.id, () => { loadDataFromDB(); if (playlists[currentPlaylistName] && playlists[currentPlaylistName].length === 0) { localIntentionalPause = true; audioPlayer.pause(); audioPlayer.src = ''; trackTitle.textContent = "Pilih lagu..."; trackArtist.textContent = "-"; lyricsDisplay.innerHTML = "<ul><li style='color:#e2e8f0;'>Lirik kosong.</li></ul>"; syncedLyrics = []; rawLyricText = ""; currentTrackId = null; releaseWakeLock(); } }); }); 
+                trackListEl.appendChild(li);
+            });
+        }
+
+        function shiftLyricsTime(offsetSeconds) {
+            if (!rawLyricText || syncedLyrics.length === 0) return alert("Lirik ini tidak memiliki format waktu (LRC) yang bisa digeser.");
+            let lines = rawLyricText.split('\n'), newLrcLines = [];
+            for (let i = 0; i < lines.length; i++) {
+                let line = lines[i], match = line.match(/\[\d{2}:\d{2}\.\d{2,3}\]/g);
+                if (match) {
+                    let newLine = line;
+                    for (let j = 0; j < match.length; j++) {
+                        let timeStr = match[j].replace(/[\[\]]/g, ''), parts = timeStr.split(':'), mins = parseInt(parts[0]), secsAndMs = parts[1].split('.'), secs = parseInt(secsAndMs[0]), ms = parseInt(secsAndMs[1]);
+                        if (secsAndMs[1].length === 2) ms *= 10;
+                        let totalSeconds = (mins * 60) + secs + (ms / 1000) + offsetSeconds; if (totalSeconds < 0) totalSeconds = 0;
+                        let newMins = Math.floor(totalSeconds / 60), newSecs = Math.floor(totalSeconds % 60), newMs = Math.floor((totalSeconds % 1) * 100);
+                        newLine = newLine.replace(match[j], `[${newMins.toString().padStart(2, '0')}:${newSecs.toString().padStart(2, '0')}.${newMs.toString().padStart(2, '0')}]`);
+                    } newLrcLines.push(newLine);
+                } else newLrcLines.push(line);
+            }
+            rawLyricText = newLrcLines.join('\n'); saveLyricsForCurrentSource({ type: 'synced', data: rawLyricText }); parseSyncedLyrics(rawLyricText, false);
+            let status = offsetSeconds > 0 ? "dimundurkan (diperlambat)" : "dimajukan (dipercepat)";
+            let infoBtn = document.getElementById('sync-controls').querySelector('span'); infoBtn.textContent = `✅ Berhasil ${status}`; setTimeout(() => { infoBtn.textContent = "⏱️ Pas-kan Waktu;"; }, 2000);
+        }
+
+        function updateMediaSessionPosition(audioEl) {
+            if (!('mediaSession' in navigator) || typeof navigator.mediaSession.setPositionState !== 'function') return;
+            if (!audioEl.duration || !isFinite(audioEl.duration) || audioEl.duration <= 0) return;
+            try {
+                navigator.mediaSession.setPositionState({
+                    duration: audioEl.duration,
+                    playbackRate: audioEl.playbackRate || 1,
+                    position: Math.min(audioEl.currentTime, audioEl.duration)
+                });
+            } catch (err) { /* abaikan, cuma kosmetik untuk notifikasi */ }
+        }
+
+        audioPlayer.addEventListener('loadedmetadata', () => { durationEl.textContent = formatTime(audioPlayer.duration); if (!hasRestoredTime) { let savedTime = localStorage.getItem('lp_lastTime'); if (savedTime && !isNaN(savedTime) && parseFloat(savedTime) > 0) audioPlayer.currentTime = parseFloat(savedTime); hasRestoredTime = true; } updateMediaSessionPosition(audioPlayer); });
+
+        audioPlayer.addEventListener('timeupdate', () => {
+            if (audioPlayer.duration) {
+                const currentTime = audioPlayer.currentTime; progressBar.value = (currentTime / audioPlayer.duration) * 100;
+                currentTimeEl.textContent = formatTime(currentTime); durationEl.textContent = formatTime(audioPlayer.duration); localStorage.setItem('lp_lastTime', currentTime);
+                if (activeMediaSource === 'local') updateMediaSessionPosition(audioPlayer);
+                
+                if (lyricsSaveMode === 'local' && syncedLyrics.length > 0) {
+                    let activeIndex = -1;
+                    for (let i = 0; i < syncedLyrics.length; i++) { if (currentTime >= syncedLyrics[i].time) activeIndex = i; else break; }
+                    if (activeIndex !== lastLyricIndex && activeIndex !== -1) {
+                        lastLyricIndex = activeIndex; const liElements = lyricsDisplay.querySelectorAll('li');
+                        liElements.forEach((li, idx) => { if (idx === activeIndex) { li.classList.add('active-lyric'); if (currentTab === 1) li.scrollIntoView({ behavior: 'smooth', block: 'center' }); } else li.classList.remove('active-lyric'); });
+                    }
+                }
+            }
+        });
+
+        function loadTrack(index, autoPlay = false) {
+            const tracks = playlists[currentPlaylistName]; if (!tracks || tracks.length === 0) return;
+            const track = tracks[index]; if (!track || !track.fileData) return;
+            currentTrackId = track.id; lyricsSaveMode = 'local';
+            if (autoPlay) { hasRestoredTime = true; localStorage.setItem('lp_lastTime', 0); }
+            localStorage.setItem('lp_lastPlaylist', currentPlaylistName); localStorage.setItem('lp_lastTrackIndex', index);
+            let oldObjectURL = currentObjectURL; currentObjectURL = URL.createObjectURL(track.fileData); audioPlayer.src = currentObjectURL;
+            let cleanName = track.name.replace(/\.[^/.]+$/, "").replace(/[_.-]/g, " "); trackTitle.textContent = cleanName; trackArtist.textContent = `Tersimpan Offline`; lastLyricTitle = cleanName;
+            
+            if ('mediaSession' in navigator) {
+                navigator.mediaSession.metadata = new MediaMetadata({
+                    title: cleanName,
+                    artist: currentPlaylistName,
+                    album: 'LP Player Offline'
+                });
+            }
+
+            lyricsSearchInput.value = cleanName; updateLyricsClearBtn();
+            
+            renderTracks();
+            
+            setTimeout(() => {
+                if (currentTab === 0) {
+                    const activeLi = document.querySelector('#track-list li.active');
+                    if(activeLi) { activeLi.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+                }
+            }, 150);
+
+            if (track.lyrics) { rawLyricText = track.lyrics.data; if (track.lyrics.type === 'synced') parseSyncedLyrics(track.lyrics.data, false); else displayPlainLyrics(track.lyrics.data, false); } else fetchLyrics(cleanName);
+            if (autoPlay) { requestWakeLock(); audioPlayer.play().catch(e => console.log("Gagal memutar:", e)); }
+            if (oldObjectURL) setTimeout(() => { URL.revokeObjectURL(oldObjectURL); }, 1000);
+        }
+
+        async function fetchLyrics(searchQuery) {
+            lyricsDisplay.innerHTML = "<ul><li style='color:#e2e8f0;'>Mencari lirik online...</li></ul>"; syncedLyrics = []; rawLyricText = ""; lastLyricTitle = searchQuery;
+            try {
+                let response = await fetch(`https://lrclib.net/api/search?q=${encodeURIComponent(searchQuery)}`), data = await response.json();
+                if (data && data.length > 0) { let found = data.find(item => item.syncedLyrics); if (found) parseSyncedLyrics(found.syncedLyrics, true); else { let plain = data.find(item => item.plainLyrics); if (plain) displayPlainLyrics(plain.plainLyrics, true); else lyricsDisplay.innerHTML = "<ul><li style='color:#e2e8f0;'>Lirik tidak ditemukan.</li></ul>"; } } else lyricsDisplay.innerHTML = "<ul><li style='color:#e2e8f0;'>Lirik tidak ditemukan.</li></ul>";
+            } catch (err) { lyricsDisplay.innerHTML = "<ul><li style='color:#e2e8f0;'>Offline / Gagal memuat.</li></ul>"; }
+        }
+
+        async function searchLyricsDirect() {
+            const query = lyricsSearchInput.value.trim(); if (!query) return alert('Masukkan kata kunci!');
+            lyricsDisplay.innerHTML = "<ul><li style='color:#e2e8f0;'>Mencari lirik...</li></ul>"; syncedLyrics = []; rawLyricText = ""; lastLyricTitle = query;
+            try {
+                let response = await fetch(`https://lrclib.net/api/search?q=${encodeURIComponent(query)}`), data = await response.json();
+                if (data && data.length > 0) {
+                    if (data.length === 1) { if (data[0].syncedLyrics) parseSyncedLyrics(data[0].syncedLyrics, true); else if (data[0].plainLyrics) displayPlainLyrics(data[0].plainLyrics, true); else lyricsDisplay.innerHTML = "<ul><li style='color:#e2e8f0;'>Lirik kosong.</li></ul>"; } else {
+                        searchResultsList.innerHTML = '';
+                        data.forEach((item) => { const div = document.createElement('div'); div.className = 'search-result-item'; div.innerHTML = `<strong>${item.trackName}</strong> - ${item.artistName}`; div.addEventListener('click', () => { lastLyricTitle = `${item.trackName} - ${item.artistName}`; if (item.syncedLyrics) parseSyncedLyrics(item.syncedLyrics, true); else if (item.plainLyrics) displayPlainLyrics(item.plainLyrics, true); else lyricsDisplay.innerHTML = "<ul><li style='color:#e2e8f0;'>Lirik kosong.</li></ul>"; closeSearchModal(); }); searchResultsList.appendChild(div); });
+                        searchModal.classList.remove('hidden'); lyricsDisplay.innerHTML = "<ul><li style='color:#e2e8f0;'>Pilih versi lirik pada pop-up...</li></ul>";
+                    }
+                } else lyricsDisplay.innerHTML = "<ul><li style='color:#e2e8f0;'>Lirik tidak ditemukan.</li></ul>";
+            } catch (err) { lyricsDisplay.innerHTML = "<ul><li style='color:#e2e8f0;'>Gagal mencari lirik.</li></ul>"; }
+        }
+
+        function closeSearchModal() { searchModal.classList.add('hidden'); }
+
+        function displayPlainLyrics(plainText, saveToDB = false) { lastLyricIndex = -1; syncedLyrics = []; rawLyricText = plainText; lyricsDisplay.innerHTML = `<ul><li style="color:#cbd5e1; font-size: 13px; line-height: 1.6; text-align: center;">${plainText.replace(/\n/g, '<br>')}</li></ul>`; if (saveToDB) saveLyricsForCurrentSource({ type: 'plain', data: plainText }); }
+
+        function parseSyncedLyrics(lrcString, saveToDB = false) {
+            lastLyricIndex = -1; rawLyricText = lrcString; const lines = lrcString.split('\n'); syncedLyrics = []; const ul = document.createElement('ul');
+            lines.forEach((line) => { const match = line.match(/\[(\d{2}):(\d{2})\.(\d{2,3})\](.*)/); if (match) { const minutes = parseInt(match[1]), seconds = parseInt(match[2]), milliseconds = parseInt(match[3]), timeInSeconds = minutes * 60 + seconds + milliseconds / 1000, text = match[4].trim(); if (text) { syncedLyrics.push({ time: timeInSeconds, text: text }); const li = document.createElement('li'); li.textContent = text; ul.appendChild(li); } } });
+            if (syncedLyrics.length > 0) { lyricsDisplay.innerHTML = ''; lyricsDisplay.appendChild(ul); if (saveToDB) saveLyricsForCurrentSource({ type: 'synced', data: lrcString }); } else displayPlainLyrics(lrcString, saveToDB);
+        }
+
+        function playTrack() { const tracks = playlists[currentPlaylistName]; if (!tracks || tracks.length === 0) return; silentAudioPlayer.play().catch(e => console.log(e)); requestWakeLock(); let playPromise = audioPlayer.play(); if (playPromise !== undefined) playPromise.catch(error => { console.log("Tertahan:", error); releaseWakeLock(); }); }
+        function pauseTrack() { localIntentionalPause = true; audioPlayer.pause(); silentAudioPlayer.pause(); releaseWakeLock(); }
+
+        playBtn.addEventListener('click', () => { if (audioPlayer.paused) playTrack(); else pauseTrack(); });
+
+        audioPlayer.addEventListener('ended', () => { 
+            const tracks = playlists[currentPlaylistName]; if (!tracks || tracks.length === 0) return; 
+            silentAudioPlayer.play().catch(e => {}); 
+            if (playMode === 'repeat1') { audioPlayer.currentTime = 0; playTrack(); } 
+            else if (playMode === 'shuffle') { currentTrackIndex = Math.floor(Math.random() * tracks.length); loadTrack(currentTrackIndex, true); } 
+            else { currentTrackIndex++; if (currentTrackIndex >= tracks.length) currentTrackIndex = 0; loadTrack(currentTrackIndex, true); } 
+        });
+        
+        nextBtn.addEventListener('click', () => { const tracks = playlists[currentPlaylistName]; if (!tracks || tracks.length === 0) return; if (playMode === 'shuffle') currentTrackIndex = Math.floor(Math.random() * tracks.length); else currentTrackIndex = (currentTrackIndex + 1) % tracks.length; loadTrack(currentTrackIndex, true); });
+        prevBtn.addEventListener('click', () => { const tracks = playlists[currentPlaylistName]; if (!tracks || tracks.length === 0) return; currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length; loadTrack(currentTrackIndex, true); });
+        progressBar.addEventListener('input', () => { if (audioPlayer.duration) audioPlayer.currentTime = (progressBar.value / 100) * audioPlayer.duration; });
+        function formatTime(seconds) { const m = Math.floor(seconds / 60), s = Math.floor(seconds % 60); return `${m}:${s < 10 ? '0' : ''}${s}`; }
+        document.addEventListener('visibilitychange', async () => {
+            if (document.visibilityState === 'hidden') {
+                // Layar mati / pindah app: batalkan semua proses fetch/retry Drive yang sedang berjalan
+                // supaya tidak "menumpuk" dan meletus jadi lompat banyak track saat dibuka lagi.
+                driveIndexWhenHidden = driveCurrentIndex;
+                driveWasPlayingWhenHidden = (activeMediaSource === 'drive' && !driveAudio.paused);
+                driveLoadToken++; // Menggugurkan semua callback fetch/error/stall lama yang masih tertunda
+                clearDriveStallTimer();
+            } else if (document.visibilityState === 'visible') {
+                if (wakeLock !== null && (!audioPlayer.paused || !driveAudio.paused)) requestWakeLock();
+                if (driveWasPlayingWhenHidden && driveAudio.paused && driveIndexWhenHidden !== -1) {
+                    // OS menghentikan audio saat layar mati -> lanjutkan track YANG SAMA, jangan skip ke track lain
+                    loadDriveTrack(driveIndexWhenHidden, true);
+                }
+                driveWasPlayingWhenHidden = false;
+            }
+        });
+
+        const styleSheet = document.styleSheets[0]; styleSheet.insertRule("@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }", styleSheet.cssRules.length);
+        initDB();
+        updateBrowseLoginStatus(false);
+
+        // ========== TAB 3: GOOGLE DRIVE PLAYER ==========
+        const driveAudio = document.getElementById('drive-audio-player');
+        const driveSearchInput = document.getElementById('drive-search-input');
+        const driveSearchClearBtn = document.getElementById('drive-search-clear-btn');
+        const driveBulkModeBtn = document.getElementById('drive-bulk-mode-btn');
+        const driveBulkToolbar = document.getElementById('drive-bulk-toolbar');
+        const driveBulkSelectAllBtn = document.getElementById('drive-bulk-select-all-btn');
+        const driveBulkDeleteBtn = document.getElementById('drive-bulk-delete-btn');
+        const driveBulkCancelBtn = document.getElementById('drive-bulk-cancel-btn');
+        const driveStatusLine = document.getElementById('drive-status-line');
+        const driveTrackListEl = document.getElementById('drive-track-list');
+        const driveTrackTitle = document.getElementById('drive-track-title');
+        const driveTrackArtist = document.getElementById('drive-track-artist');
+        const driveDiscIcon = document.getElementById('drive-disc-icon');
+        const drivePlayBtn = document.getElementById('drive-play-btn');
+        const drivePlayIcon = document.getElementById('drive-play-icon');
+        const drivePrevBtn = document.getElementById('drive-prev-btn');
+        const driveNextBtn = document.getElementById('drive-next-btn');
+        const driveProgressBar = document.getElementById('drive-progress-bar');
+        const driveCurrentTimeEl = document.getElementById('drive-current-time');
+        const driveDurationEl = document.getElementById('drive-duration');
+
+        const drivePlaylistContainer = document.getElementById('drive-playlist-container');
+        const activeDrivePlaylistNameEl = document.getElementById('active-drive-playlist-name');
+        const newDrivePlaylistInput = document.getElementById('new-drive-playlist-name');
+        const createDrivePlaylistBtn = document.getElementById('create-drive-playlist-btn');
+
+        let drivePlaylists = { "Utama": [] };
+        let currentDrivePlaylistName = "Utama";
+        let driveCurrentIndex = -1;
+        let drivePlayMode = 'normal';
+        let hasDriveRestoredTime = false; 
+
+        function setDrivePlayMode(mode) {
+            drivePlayMode = mode;
+            document.getElementById('drive-btn-normal').classList.remove('active-mode'); document.getElementById('drive-btn-repeat1').classList.remove('active-mode'); document.getElementById('drive-btn-shuffle').classList.remove('active-mode');
+            if (mode === 'normal') document.getElementById('drive-btn-normal').classList.add('active-mode');
+            if (mode === 'repeat1') document.getElementById('drive-btn-repeat1').classList.add('active-mode');
+            if (mode === 'shuffle') document.getElementById('drive-btn-shuffle').classList.add('active-mode');
+        }
+
+        function getCurrentDriveTracks() { return drivePlaylists[currentDrivePlaylistName] || []; }
+
+        function loadDriveTracksFromStorage() {
+            try {
+                const savedPlaylists = localStorage.getItem('lp_drive_playlists');
+                if (savedPlaylists) {
+                    drivePlaylists = JSON.parse(savedPlaylists);
+                } else {
+                    const legacy = localStorage.getItem('lp_drive_tracks');
+                    drivePlaylists = { "Utama": legacy ? JSON.parse(legacy) : [] };
+                }
+                if (!drivePlaylists["Utama"]) drivePlaylists["Utama"] = [];
+                const savedCurrent = localStorage.getItem('lp_drive_lastPlaylist');
+                currentDrivePlaylistName = (savedCurrent && drivePlaylists[savedCurrent]) ? savedCurrent : "Utama";
+            } catch (e) { drivePlaylists = { "Utama": [] }; currentDrivePlaylistName = "Utama"; }
+            renderDrivePlaylists();
+            renderDriveTracks();
+            bersihkanFileSampah();
+
+            let savedDriveIndex = localStorage.getItem('lp_drive_lastTrackIndex');
+            if (savedDriveIndex !== null && !isNaN(savedDriveIndex)) {
+                let idx = parseInt(savedDriveIndex);
+                if (idx >= 0 && idx < drivePlaylists[currentDrivePlaylistName].length && !driveAudio.src) {
+                    loadDriveTrack(idx, false);
+                }
+            }
+        }
+
+        function saveDriveTracksToStorage() {
+            localStorage.setItem('lp_drive_playlists', JSON.stringify(drivePlaylists));
+            localStorage.setItem('lp_drive_lastPlaylist', currentDrivePlaylistName);
+        }
+
+        function renderDrivePlaylists() {
+            drivePlaylistContainer.innerHTML = '';
+            Object.keys(drivePlaylists).forEach(name => {
+                const li = document.createElement('li'); if (name === currentDrivePlaylistName) li.className = 'active';
+                li.innerHTML = `<div style="display: flex; align-items: center; gap: 6px; flex: 1; pointer-events: none;"><span>🎵</span><span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${name}</span></div><div style="display: flex; align-items: center; gap: 4px;"><span class="badge">${drivePlaylists[name].length}</span>${name !== 'Utama' ? `<button class="btn-del delete-drive-pl-btn">🗑</button>` : ''}</div>`;
+                li.addEventListener('click', (e) => { if (!e.target.closest('.delete-drive-pl-btn')) switchDrivePlaylist(name); });
+                if (li.querySelector('.delete-drive-pl-btn')) li.querySelector('.delete-drive-pl-btn').addEventListener('click', (e) => { e.stopPropagation(); deleteDrivePlaylist(name); });
+                drivePlaylistContainer.appendChild(li);
+            });
+            activeDrivePlaylistNameEl.textContent = `Playlist Aktif: ${currentDrivePlaylistName}`;
+            const browseTargetEl = document.getElementById('browse-target-playlist');
+            if (browseTargetEl) browseTargetEl.textContent = currentDrivePlaylistName;
+        }
+
+        function switchDrivePlaylist(name) {
+            currentDrivePlaylistName = name; saveDriveTracksToStorage();
+            driveIntentionalPause = true; driveAudio.pause(); driveAudio.src = ''; driveCurrentIndex = -1;
+            driveTrackTitle.textContent = 'Belum ada lagu...'; driveTrackArtist.textContent = '-';
+            drivePlayIcon.textContent = '▶'; driveDiscIcon.style.animation = 'none';
+            driveBulkMode = false; driveSelectedIndices.clear(); driveBulkToolbar.style.display = 'none'; driveBulkModeBtn.textContent = '🗑 Hapus Massal';
+            renderDrivePlaylists(); renderDriveTracks();
+        }
+
+        async function deleteDrivePlaylist(name) {
+            if (name === 'Utama') return;
+            if (confirm(`Yakin ingin menghapus playlist "${name}"?`)) {
+                const tracksToDelete = drivePlaylists[name] || [];
+                for (let track of tracksToDelete) {
+                    await hapusCacheLaguDrive(track);
+                }
+
+                delete drivePlaylists[name];
+                if (currentDrivePlaylistName === name) currentDrivePlaylistName = 'Utama';
+                saveDriveTracksToStorage();
+                driveIntentionalPause = true; driveAudio.pause(); driveAudio.src = ''; driveCurrentIndex = -1;
+                driveTrackTitle.textContent = 'Belum ada lagu...'; driveTrackArtist.textContent = '-';
+                drivePlayIcon.textContent = '▶'; driveDiscIcon.style.animation = 'none';
+                renderDrivePlaylists(); renderDriveTracks();
+            }
+        }
+
+        createDrivePlaylistBtn.addEventListener('click', () => {
+            const name = newDrivePlaylistInput.value.trim();
+            if (!name) return alert('Nama playlist kosong!'); if (drivePlaylists[name]) return alert('Playlist sudah ada!');
+            drivePlaylists[name] = []; newDrivePlaylistInput.value = ''; saveDriveTracksToStorage();
+            switchDrivePlaylist(name);
+        });
+
+        newDrivePlaylistInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); createDrivePlaylistBtn.click(); } });
+
+        function extractDriveId(url) {
+            const patterns = [/\/file\/d\/([a-zA-Z0-9_-]{10,})/, /[?&]id=([a-zA-Z0-9_-]{10,})/, /^([a-zA-Z0-9_-]{25,})$/];
+            for (const p of patterns) { const m = url.match(p); if (m) return m[1]; }
+            return null;
+        }
+
+        function toDriveStreamUrl(id) {
+            if (isApiKeyConfigured()) return `https://www.googleapis.com/drive/v3/files/${id}?alt=media&key=${GOOGLE_API_KEY}`;
+            return `https://drive.google.com/uc?export=download&id=${id}`;
+        }
+
+        function isApiKeyConfigured() { return GOOGLE_API_KEY && GOOGLE_API_KEY.indexOf('MASUKKAN_') !== 0; }
+
+        async function fetchDriveFileName(fileId) {
+            if (!isApiKeyConfigured()) return null;
+            try {
+                const res = await fetch(`https://www.googleapis.com/drive/v3/files/${fileId}?fields=name&key=${GOOGLE_API_KEY}`);
+                if (!res.ok) return null;
+                const data = await res.json();
+                return data && data.name ? data.name.replace(/\.[a-zA-Z0-9]{1,5}$/, '') : null;
+            } catch (e) { return null; }
+        }
+
+        function showDriveStatus(msg, isOk) {
+            driveStatusLine.textContent = msg;
+            driveStatusLine.classList.toggle('ok', !!isOk);
+            setTimeout(() => { driveStatusLine.textContent = ''; }, 4000);
+        }
+
+        let driveSearchQuery = '';
+        driveSearchInput.addEventListener('input', () => {
+            driveSearchQuery = driveSearchInput.value;
+            driveSearchClearBtn.style.display = driveSearchQuery ? 'inline-block' : 'none';
+            renderDriveTracks();
+        });
+        driveSearchClearBtn.addEventListener('click', () => {
+            driveSearchInput.value = ''; driveSearchQuery = ''; driveSearchClearBtn.style.display = 'none'; renderDriveTracks();
+        });
+
+        const bulkDriveModal = document.getElementById('bulk-drive-modal');
+        const bulkDriveTextarea = document.getElementById('bulk-drive-textarea');
+        const bulkDriveStatusLine = document.getElementById('bulk-drive-status-line');
+        const bulkDriveAddBtn = document.getElementById('bulk-drive-add-btn');
+        const bulkDriveTargetPlaylistEl = document.getElementById('bulk-drive-target-playlist');
+
+        function openBulkDriveModal() {
+            bulkDriveTargetPlaylistEl.textContent = currentDrivePlaylistName;
+            bulkDriveTextarea.value = '';
+            bulkDriveStatusLine.textContent = ''; bulkDriveStatusLine.classList.remove('ok');
+            bulkDriveModal.classList.remove('hidden');
+        }
+        function closeBulkDriveModal() { bulkDriveModal.classList.add('hidden'); }
+
+        bulkDriveAddBtn.addEventListener('click', async () => {
+            const lines = bulkDriveTextarea.value.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+            if (!lines.length) { bulkDriveStatusLine.classList.remove('ok'); bulkDriveStatusLine.textContent = 'Tempel link dulu, satu per baris.'; return; }
+            const tracks = getCurrentDriveTracks();
+            const validIds = [];
+            let skipped = 0;
+            lines.forEach(line => {
+                const id = extractDriveId(line);
+                if (!id) { skipped++; return; }
+                if (tracks.some(t => t.driveId === id) || validIds.includes(id)) { skipped++; return; }
+                validIds.push(id);
+            });
+            if (!validIds.length) {
+                bulkDriveStatusLine.classList.remove('ok');
+                bulkDriveStatusLine.textContent = `Tidak ada lagu ditambahkan. ${skipped} baris dilewati.`;
+                return;
+            }
+            const namingEnabled = isApiKeyConfigured();
+            if (namingEnabled) { bulkDriveStatusLine.classList.remove('ok'); bulkDriveStatusLine.textContent = `Mengambil nama untuk ${validIds.length} lagu...`; }
+            let added = 0;
+            for (const id of validIds) {
+                let name = namingEnabled ? await fetchDriveFileName(id) : null;
+                if (!name) name = `Lagu Drive ${tracks.length + 1}`;
+                tracks.push({ name: name, driveId: id, url: toDriveStreamUrl(id) });
+                added++;
+            }
+            saveDriveTracksToStorage();
+            renderDrivePlaylists(); renderDriveTracks();
+            if (driveCurrentIndex === -1 && tracks.length) loadDriveTrack(0, false);
+            bulkDriveStatusLine.classList.toggle('ok', added > 0);
+            bulkDriveStatusLine.textContent = `${added} lagu ditambahkan.`;
+            bulkDriveTextarea.value = '';
+        });
+
+        let pickerApiLoaded = false;
+        let gisInited = false;
+        let tokenClient = null;
+        let driveAccessToken = null;
+
+        function realGapiLoaded() {
+            gapi.load('picker', () => { pickerApiLoaded = true; });
+        }
+        if (window.__gapiReady) { realGapiLoaded(); } else { window.__onGapiLoaded = realGapiLoaded; }
+
+        const DRIVE_TOKEN_STORAGE_KEY = 'lp_drive_token';
+        function saveDriveTokenToStorage(token, expiresInSeconds) {
+            try {
+                const expiryTime = Date.now() + (Number(expiresInSeconds || 3500) * 1000) - 60000;
+                localStorage.setItem(DRIVE_TOKEN_STORAGE_KEY, JSON.stringify({ token, expiryTime }));
+            } catch (e) {}
+        }
+        function loadDriveTokenFromStorage() {
+            try {
+                const raw = localStorage.getItem(DRIVE_TOKEN_STORAGE_KEY);
+                if (!raw) return null;
+                const { token, expiryTime } = JSON.parse(raw);
+                if (token && Date.now() < expiryTime) return token;
+                localStorage.removeItem(DRIVE_TOKEN_STORAGE_KEY);
+                return null;
+            } catch (e) { return null; }
+        }
+        function clearDriveTokenFromStorage() {
+            try { localStorage.removeItem(DRIVE_TOKEN_STORAGE_KEY); } catch (e) {}
+        }
+
+        function realGisLoaded() {
+            if (!window.google || !GOOGLE_CLIENT_ID || GOOGLE_CLIENT_ID.indexOf('MASUKKAN_') === 0) { gisInited = false; return; }
+            tokenClient = google.accounts.oauth2.initTokenClient({
+                client_id: GOOGLE_CLIENT_ID,
+                scope: 'https://www.googleapis.com/auth/drive.readonly',
+                callback: (tokenResponse) => {
+                    if (tokenResponse && tokenResponse.access_token) {
+                        driveAccessToken = tokenResponse.access_token;
+                        saveDriveTokenToStorage(tokenResponse.access_token, tokenResponse.expires_in);
+                        updateBrowseLoginStatus(true);
+                    }
+                },
+                error_callback: () => {},
+            });
+            gisInited = true;
+            const cachedToken = loadDriveTokenFromStorage();
+            if (cachedToken) {
+                driveAccessToken = cachedToken;
+                updateBrowseLoginStatus(true);
+            } else {
+                attemptSilentDriveLogin();
+            }
+        }
+        if (window.__gisReady) { realGisLoaded(); } else { window.__onGisLoaded = realGisLoaded; }
+
+        function attemptSilentDriveLogin() {
+            if (!tokenClient || driveAccessToken) return;
+            try { tokenClient.requestAccessToken({ prompt: '' }); } catch (e) {}
+        }
+
+        function updateBrowseLoginStatus(loggedIn) {
+            const statusEl = document.getElementById('browse-login-status');
+            const pickerBtn = document.getElementById('browse-open-picker-btn');
+            const logoutBtn = document.getElementById('browse-logout-btn');
+            if (!statusEl) return;
+            statusEl.textContent = loggedIn ? '✅ Sudah login Google Drive' : 'Belum login';
+            pickerBtn.disabled = !loggedIn;
+            logoutBtn.classList.toggle('hidden', !loggedIn);
+        }
+
+        function loginGoogleDrive() {
+            if (!GOOGLE_CLIENT_ID || GOOGLE_CLIENT_ID.indexOf('MASUKKAN_') === 0) {
+                return alert('Fitur ini butuh Client ID Google Cloud.');
+            }
+            if (!tokenClient) { realGisLoaded(); }
+            if (!tokenClient) return alert('Google belum siap.');
+            tokenClient.requestAccessToken({ prompt: driveAccessToken ? '' : 'consent' });
+        }
+
+        function logoutGoogleDrive() {
+            if (driveAccessToken && window.google) {
+                google.accounts.oauth2.revoke(driveAccessToken, () => {});
+            }
+            driveAccessToken = null;
+            clearDriveTokenFromStorage();
+            updateBrowseLoginStatus(false);
+        }
+
+        const driveBrowserModal = document.getElementById('drive-browser-modal');
+        const driveBrowserList = document.getElementById('drive-browser-list');
+        const driveBrowserBreadcrumb = document.getElementById('drive-browser-breadcrumb');
+        const driveBrowserStatusLine = document.getElementById('drive-browser-status-line');
+        const driveBrowserCountEl = document.getElementById('drive-browser-count');
+        let driveBrowserStack = [{ id: 'root', name: 'Drive Saya' }];
+        let driveBrowserSelected = new Map();
+
+        async function fetchAudioFilesRecursive(folderId, depthLeft) {
+            const mimeQuery = "(mimeType contains 'audio/' or mimeType='application/vnd.google-apps.folder')";
+            const q = encodeURIComponent(`'${folderId}' in parents and ${mimeQuery} and trashed=false`);
+            let items = [];
+            let pageToken = '';
+            do {
+                const url = `https://www.googleapis.com/drive/v3/files?q=${q}&fields=nextPageToken,files(id,name,mimeType)&pageSize=1000${pageToken ? `&pageToken=${pageToken}` : ''}`;
+                const res = await fetch(url, { headers: { Authorization: `Bearer ${driveAccessToken}` } });
+                if (!res.ok) throw new Error('status ' + res.status);
+                const data = await res.json();
+                items = items.concat(data.files || []);
+                pageToken = data.nextPageToken || '';
+            } while (pageToken);
+            let result = items.filter(f => f.mimeType && f.mimeType.startsWith('audio/')).map(f => ({ id: f.id, name: f.name }));
+            if (depthLeft > 0) {
+                const subfolders = items.filter(f => f.mimeType === 'application/vnd.google-apps.folder');
+                for (const sub of subfolders) {
+                    try {
+                        const subFiles = await fetchAudioFilesRecursive(sub.id, depthLeft - 1);
+                        result = result.concat(subFiles);
+                    } catch (e) {}
+                }
+            }
+            return result;
+        }
+
+        function openDriveBrowser() {
+            if (!driveAccessToken) return alert('Login Google Drive dulu.');
+            driveBrowserStack = [{ id: 'root', name: 'Drive Saya' }];
+            driveBrowserSelected = new Map();
+            driveBrowserModal.classList.remove('hidden');
+            loadDriveBrowserFolder();
+        }
+
+        function closeDriveBrowserModal() {
+            driveBrowserModal.classList.add('hidden');
+        }
+
+        function updateDriveBrowserCount() {
+            driveBrowserCountEl.textContent = driveBrowserSelected.size;
+        }
+
+        async function loadDriveBrowserFolder() {
+            const current = driveBrowserStack[driveBrowserStack.length - 1];
+            driveBrowserBreadcrumb.textContent = driveBrowserStack.map(f => f.name).join(' / ');
+            driveBrowserList.innerHTML = '<p style="text-align:center; font-size: 11px; color: #94a3b8;">Memuat...</p>';
+            driveBrowserStatusLine.textContent = '';
+            try {
+                const mimeQuery = "(mimeType contains 'audio/' or mimeType='application/vnd.google-apps.folder')";
+                const q = encodeURIComponent(`'${current.id}' in parents and ${mimeQuery} and trashed=false`);
+                let allFiles = [];
+                let pageToken = '';
+                do {
+                    const url = `https://www.googleapis.com/drive/v3/files?q=${q}&fields=nextPageToken,files(id,name,mimeType)&orderBy=folder,name&pageSize=1000${pageToken ? `&pageToken=${pageToken}` : ''}`;
+                    const res = await fetch(url, { headers: { Authorization: `Bearer ${driveAccessToken}` } });
+                    if (!res.ok) throw new Error('status ' + res.status);
+                    const data = await res.json();
+                    allFiles = allFiles.concat(data.files || []);
+                    pageToken = data.nextPageToken || '';
+                    if (pageToken) driveBrowserStatusLine.textContent = `Memuat... (${allFiles.length} ditemukan)`;
+                } while (pageToken);
+                renderDriveBrowserList(allFiles);
+            } catch (e) {
+                driveBrowserList.innerHTML = '<p style="text-align:center; font-size: 11px; color: #f87171;">Gagal memuat folder.</p>';
+            }
+        }
+
+        function renderDriveBrowserList(files) {
+            driveBrowserList.innerHTML = '';
+            if (driveBrowserStack.length > 1) {
+                const back = document.createElement('div');
+                back.textContent = '⬅️ Kembali';
+                back.style.cssText = 'padding:8px; background:#222; border-radius:6px; cursor:pointer; font-size:12px; color:#38bdf8;';
+                back.onclick = () => { driveBrowserStack.pop(); loadDriveBrowserFolder(); };
+                driveBrowserList.appendChild(back);
+            }
+            if (!files.length) {
+                const empty = document.createElement('p');
+                empty.style.cssText = 'text-align:center; font-size: 11px; color: #94a3b8; padding: 8px;';
+                empty.textContent = 'Folder kosong.';
+                driveBrowserList.appendChild(empty);
+            }
+            files.forEach(f => {
+                const isFolder = f.mimeType === 'application/vnd.google-apps.folder';
+                const row = document.createElement('div');
+                row.style.cssText = 'display:flex; align-items:center; gap:8px; padding:8px; background:#1c1c1c; border-radius:6px; font-size:12px; color:#e2e8f0;';
+                if (isFolder) {
+                    row.innerHTML = `<span style="font-size:16px;">📁</span><span style="flex:1; cursor:pointer;">${f.name}</span><button class="btn-action" style="font-size:10px; padding:4px 6px;" data-action="grab">➕ Ambil Semua</button><span style="color:#38bdf8; cursor:pointer;">Buka ➤</span>`;
+                    row.querySelector('span[style*="flex:1"]').onclick = () => { driveBrowserStack.push({ id: f.id, name: f.name }); loadDriveBrowserFolder(); };
+                    row.querySelector('span[style*="color:#38bdf8"]').onclick = () => { driveBrowserStack.push({ id: f.id, name: f.name }); loadDriveBrowserFolder(); };
+                    row.querySelector('button[data-action="grab"]').onclick = async (e) => {
+                        e.stopPropagation();
+                        const btn = e.target;
+                        btn.disabled = true; btn.textContent = '⏳...';
+                        try {
+                            const subFiles = await fetchAudioFilesRecursive(f.id, 4);
+                            subFiles.forEach(af => driveBrowserSelected.set(af.id, af));
+                            updateDriveBrowserCount();
+                            driveBrowserStatusLine.textContent = `${subFiles.length} lagu ditambahkan.`;
+                            driveBrowserStatusLine.style.color = '#4ade80';
+                        } catch (err) {
+                            driveBrowserStatusLine.textContent = `Gagal mengambil folder.`;
+                            driveBrowserStatusLine.style.color = '#f87171';
+                        }
+                        btn.disabled = false; btn.textContent = '➕ Ambil Semua';
+                    };
+                } else {
+                    const checked = driveBrowserSelected.has(f.id);
+                    row.innerHTML = `
+                        <input type="checkbox" ${checked ? 'checked' : ''} style="width:18px; height:18px; flex-shrink:0;">
+                        <span style="font-size:16px;">🎵</span><span style="flex:1; word-break: break-word;">${f.name}</span>`;
+                    const checkbox = row.querySelector('input');
+                    const toggle = () => {
+                        if (checkbox.checked) driveBrowserSelected.set(f.id, { id: f.id, name: f.name });
+                        else driveBrowserSelected.delete(f.id);
+                        updateDriveBrowserCount();
+                    };
+                    checkbox.onchange = toggle;
+                    row.onclick = (e) => { if (e.target !== checkbox) { checkbox.checked = !checkbox.checked; toggle(); } };
+                }
+                driveBrowserList.appendChild(row);
+            });
+            updateDriveBrowserCount();
+        }
+
+        function addSelectedDriveFiles() {
+            if (!driveBrowserSelected.size) { driveBrowserStatusLine.textContent = 'Belum ada lagu dicentang.'; return; }
+            const tracks = getCurrentDriveTracks();
+            let added = 0, skipped = 0;
+            driveBrowserSelected.forEach(f => {
+                if (tracks.some(t => t.driveId === f.id || t.fileId === f.id)) { skipped++; return; }
+                tracks.push({ name: f.name, driveId: f.id, url: toDriveStreamUrl(f.id) });
+                added++;
+            });
+            saveDriveTracksToStorage();
+            renderDrivePlaylists(); renderDriveTracks();
+            if (driveCurrentIndex === -1 && tracks.length) loadDriveTrack(0, false);
+            showDriveStatus(`${added} lagu ditambahkan ke playlist "${currentDrivePlaylistName}".`, true);
+            closeDriveBrowserModal();
+        }
+
+        let driveLoadToken = 0;
+        let driveIntentionalPause = false;
+        let driveStallTimer = null;
+        function clearDriveStallTimer() { if (driveStallTimer) { clearTimeout(driveStallTimer); driveStallTimer = null; } }
+        function armDriveStallTimer(myLoadToken) {
+            clearDriveStallTimer();
+            driveStallTimer = setTimeout(() => {
+                if (myLoadToken !== driveLoadToken) return;
+                if (driveAudio.readyState < 3) {
+                    console.warn('Drive stall timeout', driveAudio.src, 'readyState=', driveAudio.readyState);
+                    driveTrackArtist.textContent = 'Gagal memutar (timeout, koneksi terlalu lambat)';
+                    try { driveAudio.pause(); driveAudio.removeAttribute('src'); driveAudio.load(); } catch (e) {}
+                    handleDriveTrackError();
+                }
+            }, 15000);
+        }
+
+        async function loadDriveTrack(index, autoPlay) {
+            const tracks = getCurrentDriveTracks();
+            if (index < 0 || index >= tracks.length) return;
+            const myLoadToken = ++driveLoadToken;
+            clearDriveStallTimer();
+            driveCurrentIndex = index; const track = tracks[index];
+            driveErrorAutoSkip = false;
+            driveTrackTitle.textContent = track.name;
+            renderDriveTracks(); // render ulang visual
+            const cleanName = track.name.replace(/\.[^/.]+$/, "").replace(/[_.-]/g, " ");
+            
+            if ('mediaSession' in navigator) {
+                navigator.mediaSession.metadata = new MediaMetadata({
+                    title: cleanName,
+                    artist: currentDrivePlaylistName,
+                    album: 'Google Drive Player'
+                });
+            }
+
+            localStorage.setItem('lp_drive_lastTrackIndex', index);
+            if (autoPlay) { hasDriveRestoredTime = true; localStorage.setItem('lp_drive_lastTime', 0); }
+
+            lyricsSaveMode = 'drive'; lastLyricTitle = cleanName; lyricsSearchInput.value = cleanName; updateLyricsClearBtn();
+            
+            // --- JAMIN LIST BERGESER OTOMATIS KE LAGU AKTIF SAAT BERGANTI ---
+            setTimeout(() => {
+                if (currentTab === 2) {
+                    const activeLi = document.querySelector('#drive-track-list li.active');
+                    if(activeLi) { activeLi.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+                }
+            }, 150); 
+
+            if (track.lyrics) {
+                if (track.lyrics.type === 'synced') parseSyncedLyrics(track.lyrics.data, false);
+                else displayPlainLyrics(track.lyrics.data, false);
+            } else {
+                fetchLyrics(cleanName);
+            }
+            
+            driveTrackArtist.textContent = 'Google Drive';
+            const idToStream = track.driveId || track.fileId;
+            const originalUrl = idToStream ? toDriveStreamUrl(idToStream) : track.url;
+
+            if ('caches' in window) {
+                try {
+                    const cacheName = 'lp-audio-cache-v1';
+                    const cache = await caches.open(cacheName);
+                    let cachedResponse = await cache.match(originalUrl);
+                    if (myLoadToken !== driveLoadToken) return;
+                    
+                    if (cachedResponse) {
+                        driveTrackArtist.textContent = 'Google Drive (Cache)';
+                        const cachedBlob = await cachedResponse.blob();
+                        if (myLoadToken !== driveLoadToken) return;
+                        driveAudio.src = URL.createObjectURL(cachedBlob);
+                    } else {
+                        driveTrackArtist.textContent = 'Google Drive (Streaming...)';
+                        const controller = new AbortController();
+                        const fetchTimeout = setTimeout(() => controller.abort(), 20000);
+                        let netResponse;
+                        try {
+                            netResponse = await fetch(originalUrl, { signal: controller.signal });
+                        } finally {
+                            clearTimeout(fetchTimeout);
+                        }
+                        if (myLoadToken !== driveLoadToken) return;
+                        if (!netResponse.ok) {
+                            driveTrackArtist.textContent = `Gagal memutar (HTTP ${netResponse.status})`;
+                            console.warn('Drive fetch gagal', netResponse.status, track.name, originalUrl);
+                            handleDriveTrackError();
+                            return;
+                        }
+                        cache.put(originalUrl, netResponse.clone());
+                        driveAudio.src = originalUrl;
+                    }
+                } catch (err) {
+                    if (myLoadToken === driveLoadToken) {
+                        console.warn('Drive fetch error (mencoba fallback langsung)', err, track.name, originalUrl);
+                        driveAudio.src = originalUrl;
+                    }
+                }
+            } else { driveAudio.src = originalUrl; }
+            
+            if (myLoadToken !== driveLoadToken) return;
+            if (autoPlay) {
+                aktifkanAntiTidur(); // Panggil fitur anti-tidur juga di sini
+                silentAudioPlayer.play().catch(e => {});
+                driveAudio.play().catch((e) => { if (myLoadToken === driveLoadToken) { driveTrackArtist.textContent = `Gagal memutar (${e.name || 'ditolak'})`; console.warn('driveAudio play() gagal', e, driveAudio.src); handleDriveTrackError(); } });
+            }
+        }
+
+        let driveErrorAutoSkip = false;
+        let driveConsecutiveFailures = 0;
+        function handleDriveTrackError() {
+            if (document.hidden) return; // Jangan auto-skip saat layar mati/app di-background; cukup tunggu sampai dibuka lagi
+            if (driveErrorAutoSkip) return;
+            driveErrorAutoSkip = true;
+            const tracks = getCurrentDriveTracks();
+            if (tracks.length <= 1) return;
+            driveConsecutiveFailures++;
+            if (driveConsecutiveFailures >= tracks.length) {
+                driveTrackArtist.textContent = 'Gagal memutar banyak lagu — cek izin/koneksi Drive';
+                driveConsecutiveFailures = 0;
+                return;
+            }
+            setTimeout(() => { driveNextBtn.click(); }, 1500);
+        }
+
+        let driveBulkMode = false;
+        let driveSelectedIndices = new Set();
+
+        function updateDriveBulkDeleteLabel() {
+            driveBulkDeleteBtn.textContent = `Hapus Terpilih (${driveSelectedIndices.size})`;
+        }
+
+        driveBulkModeBtn.addEventListener('click', () => {
+            driveBulkMode = !driveBulkMode;
+            driveSelectedIndices.clear();
+            driveBulkToolbar.style.display = driveBulkMode ? 'flex' : 'none';
+            driveBulkModeBtn.textContent = driveBulkMode ? '✖ Batal Pilih' : '🗑 Hapus Massal';
+            updateDriveBulkDeleteLabel();
+            renderDriveTracks();
+        });
+        driveBulkCancelBtn.addEventListener('click', () => {
+            driveBulkMode = false;
+            driveSelectedIndices.clear();
+            driveBulkToolbar.style.display = 'none';
+            driveBulkModeBtn.textContent = '🗑 Hapus Massal';
+            renderDriveTracks();
+        });
+        driveBulkSelectAllBtn.addEventListener('click', () => {
+            const tracks = getCurrentDriveTracks();
+            const q = (driveSearchQuery || '').trim().toLowerCase();
+            const visibleIndices = [];
+            tracks.forEach((t, i) => { if (!q || t.name.toLowerCase().includes(q)) visibleIndices.push(i); });
+            const allSelected = visibleIndices.length > 0 && visibleIndices.every(i => driveSelectedIndices.has(i));
+            if (allSelected) { visibleIndices.forEach(i => driveSelectedIndices.delete(i)); }
+            else { visibleIndices.forEach(i => driveSelectedIndices.add(i)); }
+            updateDriveBulkDeleteLabel();
+            renderDriveTracks();
+        });
+
+        driveBulkDeleteBtn.addEventListener('click', async () => {
+            if (!driveSelectedIndices.size) return;
+            if (!confirm(`Hapus ${driveSelectedIndices.size} lagu terpilih dari playlist "${currentDrivePlaylistName}"?`)) return;
+            const tracks = getCurrentDriveTracks();
+            const sortedIndices = [...driveSelectedIndices].sort((a, b) => b - a);
+            let deletedCurrentlyPlaying = false;
+
+            for (let i of sortedIndices) {
+                await hapusCacheLaguDrive(tracks[i]);
+            }
+
+            sortedIndices.forEach(i => {
+                if (i === driveCurrentIndex) deletedCurrentlyPlaying = true;
+                else if (i < driveCurrentIndex) driveCurrentIndex--;
+                tracks.splice(i, 1);
+            });
+            saveDriveTracksToStorage();
+            if (deletedCurrentlyPlaying) {
+                driveIntentionalPause = true; driveAudio.pause(); driveAudio.src = ''; driveCurrentIndex = -1;
+                driveTrackTitle.textContent = 'Belum ada lagu...'; driveTrackArtist.textContent = '-';
+                drivePlayIcon.textContent = '▶'; driveDiscIcon.style.animation = 'none';
+                if (audioPlayer.paused) silentAudioPlayer.pause();
+            }
+            driveSelectedIndices.clear();
+            driveBulkMode = false;
+            driveBulkToolbar.style.display = 'none';
+            driveBulkModeBtn.textContent = '🗑 Hapus Massal';
+            renderDrivePlaylists(); renderDriveTracks();
+        });
+
+        function renderDriveTracks() {
+            const tracks = getCurrentDriveTracks();
+            driveTrackListEl.innerHTML = '';
+            if (!tracks.length) {
+                driveTrackListEl.innerHTML = `<li><span style="color: #cbd5e1; font-style: italic; font-size: 10px;">Belum ada lagu — tambah link lewat tombol Banyak.</span></li>`;
+                return;
+            }
+            const q = (driveSearchQuery || '').trim().toLowerCase();
+            let shownCount = 0;
+            let activeLi = null;
+            tracks.forEach((track, index) => {
+                if (q && !track.name.toLowerCase().includes(q)) return;
+                shownCount++;
+                const li = document.createElement('li'); if (index === driveCurrentIndex) li.className = 'active';
+                const checkboxHtml = driveBulkMode ? `<input type="checkbox" class="drive-select-checkbox" style="margin-right:6px; flex-shrink:0;" ${driveSelectedIndices.has(index) ? 'checked' : ''}>` : '';
+                const deleteBtnHtml = driveBulkMode ? '' : `<button class="btn-del drive-delete-btn">❌</button>`;
+                li.innerHTML = `${checkboxHtml}<span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; pointer-events: none;">${index + 1}. ${track.name}</span><div style="display:flex; align-items:center; gap:4px;">${track.lyrics ? `<span style="font-size:9px; background:#0284c7; color:#fff; padding:1px 4px; border-radius:4px;">📝 Lirik</span>` : ''}${deleteBtnHtml}</div>`;
+                if (driveBulkMode) {
+                    const checkbox = li.querySelector('.drive-select-checkbox');
+                    const toggleSelect = () => {
+                        if (driveSelectedIndices.has(index)) driveSelectedIndices.delete(index); else driveSelectedIndices.add(index);
+                        checkbox.checked = driveSelectedIndices.has(index);
+                        li.classList.toggle('active', driveSelectedIndices.has(index) || index === driveCurrentIndex);
+                        updateDriveBulkDeleteLabel();
+                    };
+                    checkbox.addEventListener('click', (e) => { e.stopPropagation(); toggleSelect(); });
+                    li.addEventListener('click', () => toggleSelect());
+                } else {
+                    li.addEventListener('click', (e) => { if (e.target.closest('.drive-delete-btn')) return; loadDriveTrack(index, true); });
+                    li.querySelector('.drive-delete-btn').addEventListener('click', async (e) => {
+                        e.stopPropagation();
+                        const currentTracks = getCurrentDriveTracks();
+                        await hapusCacheLaguDrive(currentTracks[index]);
+
+                        currentTracks.splice(index, 1); saveDriveTracksToStorage();
+                        if (index === driveCurrentIndex) {
+                            driveIntentionalPause = true; driveAudio.pause(); driveAudio.src = ''; driveCurrentIndex = -1;
+                            driveTrackTitle.textContent = 'Belum ada lagu...'; driveTrackArtist.textContent = '-';
+                            drivePlayIcon.textContent = '▶'; driveDiscIcon.style.animation = 'none';
+                            if (audioPlayer.paused) silentAudioPlayer.pause();
+                        } else if (index < driveCurrentIndex) { driveCurrentIndex--; }
+                        renderDrivePlaylists(); renderDriveTracks();
+                    });
+                }
+                driveTrackListEl.appendChild(li);
+                if (index === driveCurrentIndex) activeLi = li;
+            });
+            if (!shownCount) {
+                driveTrackListEl.innerHTML = `<li><span style="color: #cbd5e1; font-style: italic; font-size: 10px;">Tidak ada lagu yang cocok dengan pencarian "${q}".</span></li>`;
+            }
+        }
+
+        function getCurrentDriveTrackObj() {
+            const tracks = getCurrentDriveTracks();
+            return (driveCurrentIndex >= 0 && driveCurrentIndex < tracks.length) ? tracks[driveCurrentIndex] : null;
+        }
+
+        function saveDriveLyricsOffline(lyricsData) {
+            const track = getCurrentDriveTrackObj();
+            if (!track) return;
+            track.lyrics = lyricsData;
+            saveDriveTracksToStorage();
+        }
+
+        drivePlayBtn.addEventListener('click', () => {
+            const tracks = getCurrentDriveTracks();
+            if (driveCurrentIndex === -1) { if (tracks.length) loadDriveTrack(0, true); return; }
+            if (driveAudio.paused) driveAudio.play(); else { driveIntentionalPause = true; driveAudio.pause(); }
+        });
+
+        drivePrevBtn.addEventListener('click', () => {
+            const tracks = getCurrentDriveTracks();
+            if (!tracks.length) return;
+            const next = driveCurrentIndex <= 0 ? tracks.length - 1 : driveCurrentIndex - 1;
+            loadDriveTrack(next, true);
+        });
+
+        driveNextBtn.addEventListener('click', () => {
+            const tracks = getCurrentDriveTracks();
+            if (!tracks.length) return;
+            const next = drivePlayMode === 'shuffle' ? Math.floor(Math.random() * tracks.length) : (driveCurrentIndex >= tracks.length - 1 ? 0 : driveCurrentIndex + 1);
+            loadDriveTrack(next, true);
+        });
+
+        driveAudio.addEventListener('play', () => { 
+            aktifkanAntiTidur();
+            drivePlayIcon.textContent = '⏸'; 
+            driveDiscIcon.style.animation = 'spin 2s linear infinite'; 
+            activeMediaSource = 'drive'; 
+            silentAudioPlayer.play().catch(e => {}); 
+            requestWakeLock();
+            if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'playing'; 
+            updateMediaSessionPosition(driveAudio);
+        });
+        driveAudio.addEventListener('pause', () => { 
+            clearDriveStallTimer();
+            drivePlayIcon.textContent = '▶'; 
+            driveDiscIcon.style.animation = 'none'; 
+            const wasIntentional = driveIntentionalPause;
+            driveIntentionalPause = false;
+            if (wasIntentional && audioPlayer.paused) silentAudioPlayer.pause();
+            if (wasIntentional && audioPlayer.paused) releaseWakeLock();
+            if ('mediaSession' in navigator && activeMediaSource === 'drive') navigator.mediaSession.playbackState = 'paused'; 
+        });
+        driveAudio.addEventListener('waiting', () => { if (driveCurrentIndex !== -1) { driveTrackArtist.textContent = '⏳ Memuat...'; armDriveStallTimer(driveLoadToken); } });
+        driveAudio.addEventListener('playing', () => { clearDriveStallTimer(); driveConsecutiveFailures = 0; if (driveCurrentIndex !== -1 && !driveTrackArtist.textContent.includes('Cache')) driveTrackArtist.textContent = 'Google Drive'; });
+        
+        driveAudio.addEventListener('ended', () => {
+            const tracks = getCurrentDriveTracks();
+            if (!tracks.length) return;
+            silentAudioPlayer.play().catch(e => {});
+            if (drivePlayMode === 'repeat1') { driveAudio.currentTime = 0; driveAudio.play(); }
+            else driveNextBtn.click();
+        });
+
+        driveAudio.addEventListener('timeupdate', () => {
+            if (!driveAudio.duration) return;
+            driveProgressBar.value = (driveAudio.currentTime / driveAudio.duration) * 100;
+            driveCurrentTimeEl.textContent = formatTime(driveAudio.currentTime);
+            if (activeMediaSource === 'drive') updateMediaSessionPosition(driveAudio);
+            
+            if (driveAudio.currentTime > 0) {
+                localStorage.setItem('lp_drive_lastTime', driveAudio.currentTime);
+            }
+            
+            if (lyricsSaveMode === 'drive' && syncedLyrics.length > 0) {
+                const currentTime = driveAudio.currentTime;
+                let activeIndex = -1;
+                for (let i =0; i < syncedLyrics.length; i++) { if (currentTime >= syncedLyrics[i].time) activeIndex = i; else break; }
+                if (activeIndex !== lastLyricIndex && activeIndex !== -1) {
+                    lastLyricIndex = activeIndex;
+                    const liElements = lyricsDisplay.querySelectorAll('li');
+                    liElements.forEach((li, idx) => {
+                        if (idx === activeIndex) { li.classList.add('active-lyric'); if (currentTab === 1) li.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+                        else li.classList.remove('active-lyric');
+                    });
+                }
+            }
+        });
+
+        driveAudio.addEventListener('loadedmetadata', () => { 
+            driveDurationEl.textContent = formatTime(driveAudio.duration); 
+            updateMediaSessionPosition(driveAudio);
+            
+            if (!hasDriveRestoredTime) {
+                let savedTime = localStorage.getItem('lp_drive_lastTime');
+                if (savedTime && !isNaN(savedTime) && parseFloat(savedTime) > 0) {
+                    driveAudio.currentTime = parseFloat(savedTime);
+                }
+                hasDriveRestoredTime = true;
+            }
+        });
+
+        driveAudio.addEventListener('error', () => { 
+            if (driveCurrentIndex !== -1) { 
+                const codeLabels = {1:'dibatalkan', 2:'jaringan', 3:'format rusak', 4:'sumber tidak didukung'};
+                const err = driveAudio.error;
+                const label = err ? (codeLabels[err.code] || `kode ${err.code}`) : 'tidak diketahui';
+                driveTrackArtist.textContent = `Gagal memutar (${label})`;
+                console.warn('driveAudio error', err, driveAudio.src);
+                handleDriveTrackError();
+            } 
+        });
+        driveProgressBar.addEventListener('input', () => { if (driveAudio.duration) driveAudio.currentTime = (driveProgressBar.value / 100) * driveAudio.duration; });
+
+        async function hapusCacheLaguDrive(track) {
+            if ('caches' in window && track) {
+                try {
+                    const cache = await caches.open('lp-audio-cache-v1');
+                    const idToStream = track.driveId || track.fileId;
+                    const originalUrl = idToStream ? toDriveStreamUrl(idToStream) : track.url;
+                    await cache.delete(originalUrl);
+                } catch (e) { console.log("Gagal hapus cache lagu", e); }
+            }
+        }
+
+        async function bersihkanFileSampah() {
+            if (!('caches' in window)) return;
+            try {
+                const cache = await caches.open('lp-audio-cache-v1');
+                const cachedRequests = await cache.keys();
+                
+                let urlLaguAktif = new Set();
+                for (let playlistName in drivePlaylists) {
+                    drivePlaylists[playlistName].forEach(track => {
+                        const idToStream = track.driveId || track.fileId;
+                        if (idToStream) urlLaguAktif.add(toDriveStreamUrl(idToStream));
+                        else if (track.url) urlLaguAktif.add(track.url);
+                    });
+                }
+
+                let jumlahDihapus = 0;
+                for (let req of cachedRequests) {
+                    if (!urlLaguAktif.has(req.url)) {
+                        await cache.delete(req);
+                        jumlahDihapus++;
+                    }
+                }
+                
+                if (jumlahDihapus > 0) {
+                    console.log(`Berhasil membersihkan ${jumlahDihapus} file lagu hantu dari Data Pengguna.`);
+                }
+            } catch (e) {
+                console.log("Gagal membersihkan sampah:", e);
+            }
+        }
+
+        loadDriveTracksFromStorage();
+    </script>
+</body>
+</html>
