@@ -1395,9 +1395,11 @@
                 if (myLoadToken !== driveLoadToken) return;
                 if (driveAudio.readyState < 3) {
                     console.warn('Drive stall timeout', driveAudio.src, 'readyState=', driveAudio.readyState);
+                    const stalledUrl = driveAudio.currentSrc || driveAudio.src;
                     driveTrackArtist.textContent = 'Gagal memutar (timeout, koneksi terlalu lambat)';
+                    driveSuppressErrorUntil = Date.now() + 2000; // src dikosongkan di bawah -> event 'error' palsu diabaikan
                     try { driveAudio.pause(); driveAudio.removeAttribute('src'); driveAudio.load(); } catch (e) {}
-                    handleDriveTrackError();
+                    diagnoseDriveError(stalledUrl);
                 }
             }, 15000);
         }
@@ -1409,6 +1411,7 @@
             clearDriveStallTimer();
             cancelDriveBackgroundCache(); // batalkan unduhan cache lagu sebelumnya
             driveWantPlay = !!autoPlay;
+            driveProgressStamp = Date.now();
             if (drivePlayWatchdog) { clearTimeout(drivePlayWatchdog); drivePlayWatchdog = null; }
             driveCurrentIndex = index; const track = tracks[index];
             driveErrorAutoSkip = false;
@@ -1526,10 +1529,94 @@
             }, delay);
         }
 
+        // --- Diagnosa kegagalan Drive: cek status HTTP asli, coba ulang bila sifatnya sementara ---
+        let driveSuppressErrorUntil = 0; // abaikan event 'error' palsu akibat kita sendiri mengosongkan src
+        let driveRateRetry = 0;
+        async function probeDriveUrl(url) {
+            const controller = new AbortController();
+            const tm = setTimeout(() => controller.abort(), 8000);
+            try {
+                const r = await fetch(url, { headers: { Range: 'bytes=0-1' }, signal: controller.signal });
+                if (r.ok) { controller.abort(); return { ok: true, status: r.status, reason: '' }; }
+                let reason = '';
+                try { const j = await r.json(); reason = (j && j.error && ((j.error.errors && j.error.errors[0] && j.error.errors[0].reason) || j.error.status)) || ''; } catch (e) {}
+                return { ok: false, status: r.status, reason };
+            } catch (e) {
+                return { ok: false, status: 0, reason: (e && e.name === 'AbortError') ? 'tidak ada respons' : 'tidak bisa terhubung' };
+            } finally { clearTimeout(tm); }
+        }
+        async function diagnoseDriveError(urlArg) {
+            const idx = driveCurrentIndex;
+            if (idx === -1) return;
+            const url = urlArg || driveAudio.currentSrc || driveAudio.src || '';
+            const retryLater = (ms) => setTimeout(() => {
+                if (idx !== driveCurrentIndex || !driveWantPlay) return;
+                loadDriveTrack(idx, true, getDriveResumeTime(idx));
+            }, ms);
+            if (url.startsWith('blob:')) {
+                // Cache lagu mungkin rusak: hapus supaya diambil ulang dari Drive lain kali
+                try {
+                    const tr = getCurrentDriveTracks()[idx]; const id = tr && (tr.driveId || tr.fileId);
+                    const orig = id ? toDriveStreamUrl(id) : (tr && tr.url);
+                    if (orig && 'caches' in window) caches.open('lp-audio-cache-v1').then(c => c.delete(orig)).catch(() => {});
+                } catch (e) {}
+                handleDriveTrackError();
+                return;
+            }
+            if (!/^https?:/.test(url)) { handleDriveTrackError(); return; }
+            const info = await probeDriveUrl(url);
+            if (idx !== driveCurrentIndex) return; // sudah pindah lagu
+            const label = 'HTTP ' + (info.status || '-') + (info.reason ? ' ' + info.reason : '');
+            console.warn('Diagnosa Drive:', label, url);
+            if (info.ok) {
+                // Drive menjawab normal: kemungkinan gangguan sesaat -> coba sekali lagi sebelum menyerah
+                if (driveRateRetry < 1) { driveRateRetry++; driveTrackArtist.textContent = 'Memuat ulang...'; retryLater(1500); return; }
+                driveRateRetry = 0;
+                driveTrackArtist.textContent = 'Gagal memutar (format lagu tidak didukung)';
+                handleDriveTrackError();
+                return;
+            }
+            const transient = info.status === 0 || info.status === 429 || info.status >= 500 || (info.status === 403 && /limit|quota/i.test(info.reason));
+            if (transient && driveRateRetry < 3) {
+                driveRateRetry++;
+                driveTrackArtist.textContent = 'Drive sibuk (' + label + '), mencoba lagi...';
+                retryLater(2000 * driveRateRetry);
+                return;
+            }
+            driveRateRetry = 0;
+            driveTrackArtist.textContent = 'Gagal memutar (' + label + ')';
+            handleDriveTrackError();
+        }
+
+        // --- Watchdog "Memuat..." macet: berjalan sendiri, tidak ikut mati saat layar mati/nyala ---
+        let driveProgressStamp = Date.now(); // kapan terakhir lagu benar-benar maju / mulai dimuat
+        let driveStuckTries = 0;
+        function recoverDriveStuck() {
+            const idx = driveCurrentIndex;
+            driveProgressStamp = Date.now();
+            if (driveStuckTries < 2) {
+                driveStuckTries++;
+                console.warn('Watchdog: lagu macet memuat, muat ulang ke-' + driveStuckTries, driveAudio.src);
+                loadDriveTrack(idx, true, getDriveResumeTime(idx));
+            } else {
+                driveStuckTries = 0;
+                console.warn('Watchdog: lagu tetap macet, lanjut ke lagu berikutnya');
+                driveTrackArtist.textContent = 'Gagal memutar (macet), lanjut lagu berikutnya';
+                handleDriveTrackError(true);
+            }
+        }
+        setInterval(() => {
+            if (!driveWantPlay || driveCurrentIndex === -1 || activeMediaSource !== 'drive') return;
+            // Hanya untuk kasus "sedang memuat tapi tidak ada data" (bukan jeda oleh sistem/telepon)
+            if (driveAudio.paused || driveAudio.readyState >= 3) return;
+            if (Date.now() - driveProgressStamp < 25000) return;
+            recoverDriveStuck();
+        }, 5000);
+
         let driveErrorAutoSkip = false;
         let driveConsecutiveFailures = 0;
-        function handleDriveTrackError() {
-            if (document.hidden) { scheduleDriveBackgroundRetry(); return; } // Layar mati: jangan skip lagu, tapi coba ulang lagu yang sama secara otomatis
+        function handleDriveTrackError(force) {
+            if (document.hidden && !force) { scheduleDriveBackgroundRetry(); return; } // Layar mati: jangan skip lagu, tapi coba ulang lagu yang sama secara otomatis
             if (driveErrorAutoSkip) return;
             driveErrorAutoSkip = true;
             const tracks = getCurrentDriveTracks();
@@ -1715,12 +1802,13 @@
         });
         driveAudio.addEventListener('waiting', () => { if (driveCurrentIndex !== -1) { driveTrackArtist.textContent = '⏳ Memuat...'; armDriveStallTimer(driveLoadToken); } });
         driveAudio.addEventListener('timeupdate', () => {
+            if (!driveAudio.paused && driveAudio.readyState >= 3) driveProgressStamp = Date.now();
             if (driveCurrentIndex === -1 || !driveAudio.currentTime) return;
             const k = driveTrackKey(getCurrentDriveTracks()[driveCurrentIndex]);
             if (k) driveLastPos = { key: k, time: driveAudio.currentTime };
         });
         driveAudio.addEventListener('ended', () => { driveLastPos = null; });
-        driveAudio.addEventListener('playing', () => { driveBgRetryCount = 0; if (drivePendingCache) scheduleDriveCache(drivePendingCache); });
+        driveAudio.addEventListener('playing', () => { driveBgRetryCount = 0; driveStuckTries = 0; driveRateRetry = 0; if (drivePendingCache) scheduleDriveCache(drivePendingCache); });
         driveAudio.addEventListener('playing', () => { clearDriveStallTimer(); driveConsecutiveFailures = 0; if (driveCurrentIndex !== -1 && !driveTrackArtist.textContent.includes('Cache')) driveTrackArtist.textContent = 'Google Drive'; });
         
         driveAudio.addEventListener('ended', () => {
@@ -1770,13 +1858,14 @@
         });
 
         driveAudio.addEventListener('error', () => { 
+            if (Date.now() < driveSuppressErrorUntil) return;
             if (driveCurrentIndex !== -1) { 
                 const codeLabels = {1:'dibatalkan', 2:'jaringan', 3:'format rusak', 4:'sumber tidak didukung'};
                 const err = driveAudio.error;
                 const label = err ? (codeLabels[err.code] || `kode ${err.code}`) : 'tidak diketahui';
                 driveTrackArtist.textContent = `Gagal memutar (${label})`;
                 console.warn('driveAudio error', err, driveAudio.src);
-                handleDriveTrackError();
+                diagnoseDriveError();
             } 
         });
         driveProgressBar.addEventListener('input', () => { if (driveAudio.duration) driveAudio.currentTime = (driveProgressBar.value / 100) * driveAudio.duration; });
