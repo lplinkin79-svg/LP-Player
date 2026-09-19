@@ -882,11 +882,16 @@
                 driveWasPlayingWhenHidden = (activeMediaSource === 'drive' && !driveAudio.paused);
                 driveLoadToken++; // Menggugurkan semua callback fetch/error/stall lama yang masih tertunda
                 clearDriveStallTimer();
+                // Kalau lagu sedang dimuat / belum jalan saat layar mati, muat ulang dengan token baru
+                // supaya tidak berhenti sampai app dibuka lagi.
+                if (activeMediaSource === 'drive' && driveWantPlay && driveAudio.paused && driveCurrentIndex !== -1) {
+                    loadDriveTrack(driveCurrentIndex, true, getDriveResumeTime(driveCurrentIndex));
+                }
             } else if (document.visibilityState === 'visible') {
                 if (wakeLock !== null && (!audioPlayer.paused || !driveAudio.paused)) requestWakeLock();
-                if (driveWasPlayingWhenHidden && driveAudio.paused && driveIndexWhenHidden !== -1) {
-                    // OS menghentikan audio saat layar mati -> lanjutkan track YANG SAMA, jangan skip ke track lain
-                    loadDriveTrack(driveIndexWhenHidden, true);
+                if (activeMediaSource === 'drive' && driveWantPlay && driveAudio.paused && driveCurrentIndex !== -1) {
+                    // Audio terhenti saat layar mati -> lanjutkan lagu yang AKTIF sekarang dari menit terakhir, jangan skip ke lagu lain
+                    loadDriveTrack(driveCurrentIndex, true, getDriveResumeTime(driveCurrentIndex));
                 }
                 driveWasPlayingWhenHidden = false;
             }
@@ -1346,6 +1351,41 @@
         }
 
         let driveLoadToken = 0;
+        let driveWantPlay = false;      // true = pengguna ingin lagu Drive terputar (false setelah dijeda sengaja)
+        let drivePlayWatchdog = null;
+        let driveObjectURL = null;     // blob URL lagu dari cache (dilepas saat ganti lagu)
+        let driveCacheAbort = null;    // pembatal unduhan cache di latar belakang
+        let driveCacheTimer = null;
+        let drivePendingCache = null;  // lagu yang menunggu disimpan ke cache setelah stabil diputar
+        function cancelDriveBackgroundCache() {
+            if (driveCacheTimer) { clearTimeout(driveCacheTimer); driveCacheTimer = null; }
+            if (driveCacheAbort) { try { driveCacheAbort.abort(); } catch (e) {} driveCacheAbort = null; }
+            drivePendingCache = null;
+        }
+        function releaseDriveObjectURL() {
+            if (!driveObjectURL) return;
+            const u = driveObjectURL; driveObjectURL = null;
+            setTimeout(() => { try { URL.revokeObjectURL(u); } catch (e) {} }, 1000);
+        }
+        function scheduleDriveCache(pending) {
+            if (driveCacheTimer) clearTimeout(driveCacheTimer);
+            driveCacheTimer = setTimeout(async () => {
+                driveCacheTimer = null;
+                if (drivePendingCache !== pending) return;
+                if (driveAudio.paused) return; // dijadwalkan ulang oleh event 'playing' saat lanjut diputar
+                if (driveAudio.readyState < 4) { scheduleDriveCache(pending); return; } // tunggu buffer aman dulu
+                drivePendingCache = null;
+                const controller = new AbortController();
+                driveCacheAbort = controller;
+                try {
+                    const cache = await caches.open('lp-audio-cache-v1');
+                    if (await cache.match(pending.url)) return;
+                    const res = await fetch(pending.url, { signal: controller.signal });
+                    if (res.ok && res.status === 200) await cache.put(pending.url, res);
+                } catch (e) { /* dibatalkan atau gagal: abaikan, lagu tetap jalan */ }
+                finally { if (driveCacheAbort === controller) driveCacheAbort = null; }
+            }, 8000);
+        }
         let driveIntentionalPause = false;
         let driveStallTimer = null;
         function clearDriveStallTimer() { if (driveStallTimer) { clearTimeout(driveStallTimer); driveStallTimer = null; } }
@@ -1362,11 +1402,14 @@
             }, 15000);
         }
 
-        async function loadDriveTrack(index, autoPlay) {
+        async function loadDriveTrack(index, autoPlay, resumeAt = 0) {
             const tracks = getCurrentDriveTracks();
             if (index < 0 || index >= tracks.length) return;
             const myLoadToken = ++driveLoadToken;
             clearDriveStallTimer();
+            cancelDriveBackgroundCache(); // batalkan unduhan cache lagu sebelumnya
+            driveWantPlay = !!autoPlay;
+            if (drivePlayWatchdog) { clearTimeout(drivePlayWatchdog); drivePlayWatchdog = null; }
             driveCurrentIndex = index; const track = tracks[index];
             driveErrorAutoSkip = false;
             driveTrackTitle.textContent = track.name;
@@ -1382,7 +1425,10 @@
             }
 
             localStorage.setItem('lp_drive_lastTrackIndex', index);
-            if (autoPlay) { hasDriveRestoredTime = true; localStorage.setItem('lp_drive_lastTime', 0); }
+            if (autoPlay) {
+                if (resumeAt > 0) { hasDriveRestoredTime = false; localStorage.setItem('lp_drive_lastTime', resumeAt); } // lanjut dari menit terakhir (dipasang oleh listener loadedmetadata)
+                else { hasDriveRestoredTime = true; localStorage.setItem('lp_drive_lastTime', 0); }
+            }
 
             lyricsSaveMode = 'drive'; lastLyricTitle = cleanName; lyricsSearchInput.value = cleanName; updateLyricsClearBtn();
             
@@ -1416,30 +1462,23 @@
                         driveTrackArtist.textContent = 'Google Drive (Cache)';
                         const cachedBlob = await cachedResponse.blob();
                         if (myLoadToken !== driveLoadToken) return;
-                        driveAudio.src = URL.createObjectURL(cachedBlob);
+                        const newBlobUrl = URL.createObjectURL(cachedBlob);
+                        const oldBlobUrl = driveObjectURL;
+                        driveObjectURL = newBlobUrl;
+                        driveAudio.src = newBlobUrl;
+                        // Lepas blob lagu sebelumnya supaya memori tidak menumpuk
+                        if (oldBlobUrl) setTimeout(() => { try { URL.revokeObjectURL(oldBlobUrl); } catch (e) {} }, 1000);
                     } else {
+                        // Streaming langsung: hanya 1 koneksi ke Drive per lagu (tidak ada unduhan ganda).
+                        // Penyimpanan ke cache ditunda sampai lagu sudah stabil diputar (lihat scheduleDriveCache).
                         driveTrackArtist.textContent = 'Google Drive (Streaming...)';
-                        const controller = new AbortController();
-                        const fetchTimeout = setTimeout(() => controller.abort(), 20000);
-                        let netResponse;
-                        try {
-                            netResponse = await fetch(originalUrl, { signal: controller.signal });
-                        } finally {
-                            clearTimeout(fetchTimeout);
-                        }
-                        if (myLoadToken !== driveLoadToken) return;
-                        if (!netResponse.ok) {
-                            driveTrackArtist.textContent = `Gagal memutar (HTTP ${netResponse.status})`;
-                            console.warn('Drive fetch gagal', netResponse.status, track.name, originalUrl);
-                            handleDriveTrackError();
-                            return;
-                        }
-                        cache.put(originalUrl, netResponse.clone());
                         driveAudio.src = originalUrl;
+                        releaseDriveObjectURL();
+                        drivePendingCache = { url: originalUrl };
                     }
                 } catch (err) {
                     if (myLoadToken === driveLoadToken) {
-                        console.warn('Drive fetch error (mencoba fallback langsung)', err, track.name, originalUrl);
+                        console.warn('Cache error (mencoba fallback langsung)', err, track.name, originalUrl);
                         driveAudio.src = originalUrl;
                     }
                 }
@@ -1450,13 +1489,47 @@
                 aktifkanAntiTidur(); // Panggil fitur anti-tidur juga di sini
                 silentAudioPlayer.play().catch(e => {});
                 driveAudio.play().catch((e) => { if (myLoadToken === driveLoadToken) { driveTrackArtist.textContent = `Gagal memutar (${e.name || 'ditolak'})`; console.warn('driveAudio play() gagal', e, driveAudio.src); handleDriveTrackError(); } });
+                // Jaga-jaga: kalau play() ditolak/tertahan saat di latar belakang, coba ulang otomatis
+                drivePlayWatchdog = setTimeout(() => {
+                    drivePlayWatchdog = null;
+                    if (myLoadToken !== driveLoadToken || !driveWantPlay) return;
+                    if ((driveAudio.paused || driveAudio.error) && document.hidden) scheduleDriveBackgroundRetry();
+                }, 8000);
             }
+        }
+
+        // --- Posisi terakhir lagu (untuk lanjut dari menit terakhir saat lagu dimuat ulang karena gangguan) ---
+        let driveLastPos = null; // { key, time }
+        function driveTrackKey(tr) { return tr ? (tr.driveId || tr.fileId || tr.url || tr.name) : null; }
+        function getDriveResumeTime(idx) {
+            const tr = getCurrentDriveTracks()[idx];
+            if (!tr || !driveLastPos || driveLastPos.key !== driveTrackKey(tr)) return 0;
+            return driveLastPos.time > 2 ? driveLastPos.time - 1 : 0; // mundur 1 detik supaya tidak ada bagian yang terlewat
+        }
+
+        // --- Pemulihan otomatis saat layar mati / app di latar belakang ---
+        let driveBgRetryCount = 0;
+        let driveBgRetryTimer = null;
+        const DRIVE_BG_RETRY_DELAYS = [2000, 5000, 10000, 20000];
+        function scheduleDriveBackgroundRetry() {
+            if (driveBgRetryTimer) return;
+            if (!driveWantPlay || driveCurrentIndex === -1) return;
+            if (driveBgRetryCount >= DRIVE_BG_RETRY_DELAYS.length) return; // menyerah, lanjut saat app dibuka lagi
+            const delay = DRIVE_BG_RETRY_DELAYS[driveBgRetryCount++];
+            const idx = driveCurrentIndex;
+            driveBgRetryTimer = setTimeout(() => {
+                driveBgRetryTimer = null;
+                if (!driveWantPlay || driveCurrentIndex !== idx) return;
+                if (!(driveAudio.paused || driveAudio.error)) return; // sudah jalan sendiri
+                console.warn('Coba ulang lagu Drive di latar belakang, percobaan ke-' + driveBgRetryCount);
+                loadDriveTrack(idx, true, getDriveResumeTime(idx));
+            }, delay);
         }
 
         let driveErrorAutoSkip = false;
         let driveConsecutiveFailures = 0;
         function handleDriveTrackError() {
-            if (document.hidden) return; // Jangan auto-skip saat layar mati/app di-background; cukup tunggu sampai dibuka lagi
+            if (document.hidden) { scheduleDriveBackgroundRetry(); return; } // Layar mati: jangan skip lagu, tapi coba ulang lagu yang sama secara otomatis
             if (driveErrorAutoSkip) return;
             driveErrorAutoSkip = true;
             const tracks = getCurrentDriveTracks();
@@ -1619,6 +1692,7 @@
         });
 
         driveAudio.addEventListener('play', () => { 
+            driveWantPlay = true;
             aktifkanAntiTidur();
             drivePlayIcon.textContent = '⏸'; 
             driveDiscIcon.style.animation = 'spin 2s linear infinite'; 
@@ -1634,11 +1708,19 @@
             driveDiscIcon.style.animation = 'none'; 
             const wasIntentional = driveIntentionalPause;
             driveIntentionalPause = false;
+            if (wasIntentional) driveWantPlay = false;
             if (wasIntentional && audioPlayer.paused) silentAudioPlayer.pause();
             if (wasIntentional && audioPlayer.paused) releaseWakeLock();
             if ('mediaSession' in navigator && activeMediaSource === 'drive') navigator.mediaSession.playbackState = 'paused'; 
         });
         driveAudio.addEventListener('waiting', () => { if (driveCurrentIndex !== -1) { driveTrackArtist.textContent = '⏳ Memuat...'; armDriveStallTimer(driveLoadToken); } });
+        driveAudio.addEventListener('timeupdate', () => {
+            if (driveCurrentIndex === -1 || !driveAudio.currentTime) return;
+            const k = driveTrackKey(getCurrentDriveTracks()[driveCurrentIndex]);
+            if (k) driveLastPos = { key: k, time: driveAudio.currentTime };
+        });
+        driveAudio.addEventListener('ended', () => { driveLastPos = null; });
+        driveAudio.addEventListener('playing', () => { driveBgRetryCount = 0; if (drivePendingCache) scheduleDriveCache(drivePendingCache); });
         driveAudio.addEventListener('playing', () => { clearDriveStallTimer(); driveConsecutiveFailures = 0; if (driveCurrentIndex !== -1 && !driveTrackArtist.textContent.includes('Cache')) driveTrackArtist.textContent = 'Google Drive'; });
         
         driveAudio.addEventListener('ended', () => {
